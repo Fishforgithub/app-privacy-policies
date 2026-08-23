@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>App 隱私權政策索引</title>
+<style>
+  :root { color-scheme: light dark; --fg: #1c1e26; --dim: #5b6272; --bg: #f7f8fb;
+          --card: #fff; --line: #dfe3ec; --accent: #2563eb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg: #e3e6f0; --dim: #9aa1b5; --bg: #12141c; --card: #191c26;
+            --line: #2b2f3d; --accent: #89b4fa; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 0 20px 80px; background: var(--bg); color: var(--fg);
+         font: 16px/1.75 system-ui, -apple-system, "Noto Sans TC", sans-serif; }
+  main { max-width: 640px; margin: 0 auto; }
+  header { padding: 56px 0 24px; }
+  h1 { font-size: 24px; margin: 0 0 8px; }
+  p.sub { color: var(--dim); font-size: 14px; margin: 0; }
+  ul { list-style: none; padding: 0; margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+  li a { display: block; background: var(--card); border: 1px solid var(--line);
+         border-radius: 12px; padding: 16px 18px; color: var(--fg); text-decoration: none;
+         font-size: 15px; font-weight: 600; }
+  li a:hover { border-color: var(--accent); }
+  li span { display: block; font-size: 12.5px; color: var(--dim); font-weight: 400; margin-top: 4px; }
+  footer { margin-top: 48px; color: var(--dim); font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>App 隱私權政策索引</h1>
+    <p class="sub">各 App 的隱私權政策，依套件名稱分子路徑。</p>
+  </header>
+
+  <ul>
+    <li>
+      <a href="picopdf/">Pico PDF Viewer</a>
+      <span>com.fish.picopdf</span>
+    </li>
+  </ul>
+
+  <footer>
+    生日蠟燭 Happy Candle 的隱私權政策獨立放在
+    <a href="https://fishforgithub.github.io/happy-candle-privacy/">happy-candle-privacy</a>，不在這裡。
+  </footer>
+</main>
+</body>
+</html>

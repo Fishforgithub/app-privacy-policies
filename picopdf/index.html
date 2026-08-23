@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pico PDF Viewer — 隱私權政策 / Privacy Policy / プライバシーポリシー</title>
+<style>
+  :root { color-scheme: light dark; --fg: #1c1e26; --dim: #5b6272; --bg: #f7f8fb;
+          --card: #fff; --line: #dfe3ec; --accent: #2563eb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg: #e3e6f0; --dim: #9aa1b5; --bg: #12141c; --card: #191c26;
+            --line: #2b2f3d; --accent: #89b4fa; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 0 20px 80px; background: var(--bg); color: var(--fg);
+         font: 16px/1.75 system-ui, -apple-system, "Noto Sans TC", "Noto Sans JP", sans-serif; }
+  main { max-width: 720px; margin: 0 auto; }
+  header { padding: 48px 0 24px; border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+  h1 { font-size: 26px; margin: 0 0 6px; letter-spacing: .01em; }
+  .sub { color: var(--dim); font-size: 14px; margin: 0; }
+  nav { position: sticky; top: 0; background: var(--bg); padding: 14px 0;
+        border-bottom: 1px solid var(--line); margin-bottom: 32px; z-index: 1; }
+  nav a { display: inline-block; margin-right: 16px; color: var(--accent);
+          text-decoration: none; font-size: 14px; font-weight: 600; }
+  nav a:hover { text-decoration: underline; }
+  section { padding-top: 24px; }
+  h2 { font-size: 21px; margin: 40px 0 4px; padding-top: 12px; }
+  h3 { font-size: 16px; margin: 28px 0 6px; }
+  p, li { color: var(--fg); }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+          padding: 4px 20px 18px; margin: 18px 0; }
+  .updated { color: var(--dim); font-size: 14px; }
+  a { color: var(--accent); }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line);
+           color: var(--dim); font-size: 13px; }
+  code { background: var(--card); border: 1px solid var(--line); border-radius: 4px;
+         padding: 1px 5px; font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Pico PDF Viewer</h1>
+  <p class="sub">隱私權政策 · Privacy Policy · プライバシーポリシー</p>
+</header>
+
+<nav>
+  <a href="#zh">繁體中文</a>
+  <a href="#en">English</a>
+  <a href="#ja">日本語</a>
+</nav>
+
+<!-- ───────────────── 繁體中文 ───────────────── -->
+<section id="zh">
+<h2>隱私權政策（繁體中文）</h2>
+<p class="updated">最後更新：2026 年 8 月 23 日</p>
+
+<p>「Pico PDF Viewer」（套件名稱 <code>com.fish.picopdf</code>，以下稱「本 App」）
+是一款極輕量的本地 PDF／Markdown 閱讀器與編輯器。本 App <strong>沒有伺服器、
+沒有帳號、沒有登入</strong>；您開啟的每一份文件都只留在您自己的裝置上，
+本 App 從來不會把檔案內容或檔名傳到任何地方。</p>
+
+<div class="card">
+<h3>一、我們不蒐集的資料</h3>
+<p>本 App 不會要求您的姓名、電子郵件、電話號碼、通訊錄或精確位置，
+不會讀取跟您授權範圍無關的其他檔案，也沒有任何使用行為分析或後台紀錄——
+因為本 App 根本沒有後端伺服器可以接收這些資料。</p>
+</div>
+
+<div class="card">
+<h3>二、資料夾與檔案存取權限</h3>
+<p>本 App 透過 Android 系統內建的「檔案選擇器」（Storage Access Framework）
+運作，這代表：</p>
+<ul>
+  <li>您必須自己在系統選擇器裡挑選一個資料夾，本 App <strong>無法自行讀取
+      您裝置上其他沒被您選過的資料夾或檔案</strong>。</li>
+  <li>取得授權後，本 App 只會列出該資料夾裡的 <code>.pdf</code>／<code>.md</code>
+      檔案；PDF 一律唯讀；Markdown 可以在 App 內編輯，按下「儲存」會
+      <strong>直接覆寫您裝置上的原始檔案</strong>，不會另存到別的地方。</li>
+  <li>這個授權會持續有效（重新啟動手機或 App 都不需要重新選一次），直到您在
+      系統設定裡撤銷授權、移除或搬移該資料夾為止。</li>
+  <li>如果您是透過其他 App（例如 LINE、Email、瀏覽器下載通知）的「以此開啟」
+      或分享選單直接開啟單一 PDF／MD 檔案，本 App 拿到的是這一份檔案的臨時
+      讀取權限，不需要、也不會取得整個資料夾的授權。</li>
+</ul>
+<p>整個檔案讀取、渲染、Markdown 排版與編輯過程都在您的裝置上完成，
+<strong>不會上傳任何檔案內容或檔名到任何伺服器</strong>。</p>
+</div>
+
+<div class="card">
+<h3>三、儲存在您裝置上的資料</h3>
+<p>本 App 只在裝置本機（App 私有的儲存空間）保存三個介面設定：目前的主題
+（暗／亮／暖）、目前的介面語言、Markdown 編輯器是否顯示行號。這些設定不會
+離開您的手機，也不會傳送給我們或任何第三方。解除安裝本 App 會一併清除這些
+設定。</p>
+</div>
+
+<div class="card">
+<h3>四、廣告（Google AdMob）</h3>
+<p>本 App 底部有一條常駐的橫幅廣告（Banner），由 Google AdMob 提供，
+<strong>不會出現插頁廣告或獎勵廣告</strong>，也不會為了看廣告要求任何額外操作。
+廣告顯示時，Google 及其合作夥伴可能會蒐集與使用下列資料以投放與衡量廣告：</p>
+<ul>
+  <li>作業系統允許且取得必要同意時的廣告識別碼，以及其他裝置識別資訊</li>
+  <li>裝置型號、作業系統版本、語言、粗略的地理位置（依 IP 位址推估）</li>
+  <li>廣告的曝光與點擊情況</li>
+</ul>
+<p>這些資料由 Google 依其自身的隱私權政策處理，本 App 開發者無法取得個別
+使用者的資料。詳情請參閱
+<a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 如何在合作夥伴網站與 App 中使用資料</a>。
+您可以在 Android 系統設定中重設或刪除廣告 ID。</p>
+</div>
+
+<div class="card">
+<h3>五、廣告同意與追蹤控制</h3>
+<p>若您位於歐洲經濟區、英國或瑞士，本 App 會在首次顯示廣告前，透過 Google
+的使用者訊息平台（UMP）詢問您是否同意用於個人化廣告的資料處理。</p>
+<p>您可以隨時變更這個決定：開啟本 App 的<strong>設定（齒輪圖示）→ 廣告隱私
+選項</strong>。這個入口只在您所在地區的法規要求時才會出現。</p>
+</div>
+
+<div class="card">
+<h3>六、兒童</h3>
+<p>本 App 是通用的文件檢視／編輯工具，目標受眾為一般使用者，並非以兒童為
+主要對象，也不會刻意蒐集未滿 13 歲兒童的任何資料。</p>
+</div>
+
+<div class="card">
+<h3>七、權限與網路連線</h3>
+<p>本 App 只申請以下權限，<strong>沒有相機、麥克風、通訊錄、位置權限</strong>：</p>
+<ul>
+  <li><code>INTERNET</code> — 僅供載入底部 Banner 廣告使用；瀏覽、搜尋、編輯與
+      儲存文件等核心功能<strong>完全離線</strong>，不需要網路連線。</li>
+  <li><code>com.google.android.gms.permission.AD_ID</code> — Android 13 起，
+      App 只要用到廣告識別碼就必須自行宣告這個權限，用途同第四節。</li>
+</ul>
+<p>本 App 存取您選擇的資料夾／檔案，走的是 Android 系統內建的檔案選擇器
+（見第二節），不是額外的儲存空間權限。</p>
+</div>
+
+<div class="card">
+<h3>八、保存、刪除、政策變更與聯絡方式</h3>
+<p>您的 PDF 與 Markdown 檔案始終留在您自己選擇的位置，本 App 不會複製、
+搬移或備份它們到別處。解除安裝本 App 只會刪除第三節提到的介面設定，
+不會影響您裝置上原本的檔案。</p>
+<p>本政策若有修訂，會更新本頁最上方的日期並在此公告。</p>
+<p>對本政策有任何疑問，請來信：
+<a href="mailto:fish@coss.com.tw">fish@coss.com.tw</a></p>
+</div>
+</section>
+
+<!-- ───────────────── English ───────────────── -->
+<section id="en" lang="en">
+<h2>Privacy Policy (English)</h2>
+<p class="updated">Last updated: 23 August 2026</p>
+
+<p>Pico PDF Viewer (package <code>com.fish.picopdf</code>, "the App") is a very
+lightweight local PDF and Markdown reader and editor. The App
+<strong>has no server, no account, and no sign-in</strong>. Every document you
+open stays on your own device — the App never sends file contents or file
+names anywhere.</p>
+
+<div class="card">
+<h3>1. What we do not collect</h3>
+<p>The App does not ask for your name, email address, phone number, contacts,
+or precise location. It cannot read any file or folder outside what you have
+explicitly authorized, and there is no usage analytics or backend logging of
+any kind — the App simply has no backend server to receive that data.</p>
+</div>
+
+<div class="card">
+<h3>2. Folder and file access</h3>
+<p>The App works through Android's built-in file picker (the Storage Access
+Framework), which means:</p>
+<ul>
+  <li>You choose a folder yourself in the system picker. The App
+      <strong>cannot read any other folder or file on your device</strong> that
+      you have not selected.</li>
+  <li>Once authorized, the App only lists <code>.pdf</code>/<code>.md</code> files
+      inside that folder. PDFs are always read-only. Markdown files can be
+      edited inside the App, and pressing "Save" <strong>overwrites the original
+      file on your device directly</strong> — it is never saved anywhere else.</li>
+  <li>This authorization persists (rebooting your phone or restarting the App
+      does not require picking the folder again) until you revoke it in system
+      settings, or the folder is removed or moved.</li>
+  <li>If you open a single PDF or MD file through another app's "Open with" or
+      share menu (for example LINE, email, or a browser download notification),
+      the App only receives temporary access to that one file — it neither
+      needs nor obtains access to the whole folder.</li>
+</ul>
+<p>Reading, rendering, Markdown layout, and editing all happen entirely on your
+device. <strong>No file content or file name is ever uploaded to any server.</strong></p>
+</div>
+
+<div class="card">
+<h3>3. Data stored on your device</h3>
+<p>The App stores exactly three interface preferences locally, in the App's own
+private storage: the current theme (dark/light/warm), the current interface
+language, and whether the Markdown editor shows line numbers. These settings
+never leave your phone and are never sent to us or to any third party.
+Uninstalling the App removes them.</p>
+</div>
+
+<div class="card">
+<h3>4. Advertising (Google AdMob)</h3>
+<p>The App shows a persistent banner ad at the bottom of the screen, served by
+Google AdMob. <strong>There are no interstitial or rewarded ads</strong>, and
+nothing extra is ever required of you to view content because of ads. When an
+ad is served, Google and its partners may collect and use the following to
+deliver and measure advertising:</p>
+<ul>
+  <li>An advertising identifier where permitted by the operating system and
+      required consent, plus other device identifiers</li>
+  <li>Device model, OS version, language, and coarse location inferred from IP
+      address</li>
+  <li>Ad impressions and clicks</li>
+</ul>
+<p>This data is processed by Google under its own privacy policy; the developer
+of this App has no access to individual user data. See
+<a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use our services</a>.
+You can reset or delete your advertising ID in Android system settings.</p>
+</div>
+
+<div class="card">
+<h3>5. Advertising consent and tracking controls</h3>
+<p>If you are located in the European Economic Area, the United Kingdom, or
+Switzerland, the App asks for your consent through Google's User Messaging
+Platform (UMP) before any ad is shown.</p>
+<p>You can change that choice at any time: open the App's
+<strong>Settings (gear icon) → Ad privacy options</strong>. This entry appears
+only where local regulations require it.</p>
+</div>
+
+<div class="card">
+<h3>6. Children</h3>
+<p>The App is a general-purpose document viewer/editor aimed at a general
+audience. It is not directed primarily at children and does not knowingly
+collect any data from children under 13.</p>
+</div>
+
+<div class="card">
+<h3>7. Permissions and network access</h3>
+<p>The App requests only the following permissions — <strong>no camera,
+microphone, contacts, or location permission</strong> is ever requested:</p>
+<ul>
+  <li><code>INTERNET</code> — used only to load the bottom banner ad. Browsing,
+      searching, editing, and saving documents work <strong>fully offline</strong>
+      and never require a network connection.</li>
+  <li><code>com.google.android.gms.permission.AD_ID</code> — required by
+      Android 13+ for any app that uses the advertising identifier; see
+      section 4.</li>
+</ul>
+<p>Access to your chosen folder or file goes through Android's built-in file
+picker (section 2), not a separate storage permission.</p>
+</div>
+
+<div class="card">
+<h3>8. Retention, deletion, changes, and contact</h3>
+<p>Your PDF and Markdown files always stay wherever you chose to keep them —
+the App never copies, moves, or backs them up elsewhere. Uninstalling the App
+only removes the interface settings described in section 3; it does not touch
+the files themselves.</p>
+<p>If this policy changes, the date at the top of this page will be updated and
+the change announced here.</p>
+<p>Questions? Email <a href="mailto:fish@coss.com.tw">fish@coss.com.tw</a></p>
+</div>
+</section>
+
+<!-- ───────────────── 日本語 ───────────────── -->
+<section id="ja" lang="ja">
+<h2>プライバシーポリシー（日本語）</h2>
+<p class="updated">最終更新日：2026年8月23日</p>
+
+<p>「Pico PDF Viewer」（パッケージ名 <code>com.fish.picopdf</code>、以下「本
+アプリ」）は、非常に軽量なローカル PDF／Markdown ビューア兼エディタです。
+本アプリには<strong>サーバー、アカウント、ログインのいずれもありません</strong>。
+開いた文書はすべてお使いの端末内に留まり、ファイルの内容やファイル名を
+どこかへ送信することはありません。</p>
+
+<div class="card">
+<h3>1. 収集しない情報</h3>
+<p>本アプリは氏名、メールアドレス、電話番号、連絡先、正確な位置情報を求めません。
+あなたが明示的に許可した範囲以外のファイルやフォルダを読み取ることはできず、
+利用状況の解析やバックエンドでの記録も一切ありません——そもそも本アプリには
+そうした情報を受け取るサーバーが存在しません。</p>
+</div>
+
+<div class="card">
+<h3>2. フォルダとファイルへのアクセス権限</h3>
+<p>本アプリは Android 標準のファイル選択機能（Storage Access Framework）を
+通じて動作します。つまり：</p>
+<ul>
+  <li>フォルダはシステムの選択画面でご自身が選びます。本アプリが、選択して
+      いない他のフォルダやファイルを読み取ることは<strong>できません</strong>。</li>
+  <li>許可後、本アプリはそのフォルダ内の <code>.pdf</code>／<code>.md</code>
+      ファイルのみを一覧表示します。PDF は常に読み取り専用です。Markdown は
+      アプリ内で編集でき、「保存」を押すと<strong>お使いの端末上の元ファイルに
+      直接上書き</strong>されます。別の場所に保存されることはありません。</li>
+  <li>この許可は（端末の再起動やアプリの再起動をしても再選択の必要がないよう）
+      継続し、システム設定で取り消す、またはフォルダを削除・移動するまで
+      有効です。</li>
+  <li>他のアプリ（LINE、メール、ブラウザのダウンロード通知など）の「この
+      アプリで開く」や共有メニューから単一の PDF／MD ファイルを開いた場合、
+      本アプリが取得するのはそのファイル 1 件への一時的な読み取り権限のみで、
+      フォルダ全体への許可は不要かつ取得しません。</li>
+</ul>
+<p>読み込み、描画、Markdown の整形と編集はすべて端末内で行われ、
+<strong>ファイルの内容やファイル名がサーバーへ送信されることはありません</strong>。</p>
+</div>
+
+<div class="card">
+<h3>3. 端末内に保存される情報</h3>
+<p>本アプリが端末内（アプリ専用の保存領域）に保存するのは、現在のテーマ
+（ダーク／ライト／セピア）、現在の表示言語、Markdown エディタで行番号を
+表示するかどうかの 3 つの設定のみです。これらは端末の外に出ることはなく、
+開発者や第三者に送信されることもありません。アンインストールすると
+これらの設定は削除されます。</p>
+</div>
+
+<div class="card">
+<h3>4. 広告（Google AdMob）</h3>
+<p>本アプリは画面下部に常駐するバナー広告を Google AdMob で表示します。
+<strong>インタースティシャル広告やリワード広告はありません</strong>。広告の
+ために追加の操作を求めることもありません。広告の配信時、Google および
+そのパートナーは広告の配信と効果測定のために以下の情報を収集・利用する
+場合があります。</p>
+<ul>
+  <li>OS が許可し、必要な同意が得られた場合の広告 ID、およびその他の端末
+      識別情報</li>
+  <li>端末の機種、OS バージョン、言語、IP アドレスから推定されるおおまかな
+      位置</li>
+  <li>広告の表示・クリックの状況</li>
+</ul>
+<p>これらは Google 自身のプライバシーポリシーに基づいて処理され、本アプリの
+開発者が個々の利用者のデータを取得することはできません。詳しくは
+<a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google のサービスを使用するサイトやアプリから収集した情報の Google による使用</a>
+をご覧ください。Android では広告 ID をリセットまたは削除できます。</p>
+</div>
+
+<div class="card">
+<h3>5. 広告同意とトラッキング設定</h3>
+<p>欧州経済領域、英国、スイスにお住まいの場合、本アプリは広告を表示する前に
+Google のユーザーメッセージングプラットフォーム（UMP）を通じてパーソナライズ
+広告のためのデータ処理に同意するかどうかをお尋ねします。</p>
+<p>この選択はいつでも変更できます。本アプリの<strong>設定（歯車アイコン）→
+広告のプライバシー設定</strong>からどうぞ。この項目は、現地の法令上必要な
+場合にのみ表示されます。</p>
+</div>
+
+<div class="card">
+<h3>6. お子様について</h3>
+<p>本アプリは一般利用者向けの汎用ドキュメントビューア兼エディタです。
+子供向けを主目的とはしておらず、13 歳未満のお子様から意図的に情報を
+収集することはありません。</p>
+</div>
+
+<div class="card">
+<h3>7. 権限とネットワーク接続</h3>
+<p>本アプリが要求する権限は以下のみで、<strong>カメラ、マイク、連絡先、
+位置情報の権限は一切要求しません</strong>。</p>
+<ul>
+  <li><code>INTERNET</code> — 画面下部のバナー広告の読み込みにのみ使用します。
+      閲覧・検索・編集・保存といった中心機能は<strong>完全にオフライン</strong>で
+      動作し、通信は不要です。</li>
+  <li><code>com.google.android.gms.permission.AD_ID</code> — Android 13 以降、
+      広告識別子を利用するアプリに必須の権限です。用途は第4節と同じです。</li>
+</ul>
+<p>選択したフォルダ・ファイルへのアクセスは Android 標準のファイル選択機能
+（第2節）によるもので、別途のストレージ権限ではありません。</p>
+</div>
+
+<div class="card">
+<h3>8. 保存、削除、変更、お問い合わせ</h3>
+<p>PDF と Markdown ファイルは常にご自身が選んだ場所に留まります。本アプリが
+それらを別の場所へコピー・移動・バックアップすることはありません。
+アンインストールすると削除されるのは第3節の設定のみで、ファイル自体には
+影響しません。</p>
+<p>本ポリシーを改訂した場合は、ページ冒頭の日付を更新してお知らせします。</p>
+<p>ご質問は <a href="mailto:fish@coss.com.tw">fish@coss.com.tw</a> までご連絡ください。</p>
+</div>
+</section>
+
+<footer>
+  Pico PDF Viewer · com.fish.picopdf<br>
+  © 2026 Fish. 本頁為 Google Play 商店資訊所引用的隱私權政策。
+</footer>
+
+</main>
+</body>
+</html>
