@@ -60,13 +60,13 @@
 <p>「Bonbon 糖盒」（程式名稱 <code>bonboncrm</code>，網站
 <a href="https://bonbon.fish-zero.com/">bonbon.fish-zero.com</a>，以下稱「本 App」）
 是一款離線客戶本。本 App <strong>沒有帳號系統、沒有伺服器端客戶資料庫</strong>。
-姓名、電話、生日、備註、標籤、體況、喜好等客戶內容只寫在您正在使用的裝置上。
+姓名、電話、生日、備註、標籤、體況、喜好、頭像相片等客戶內容只寫在您正在使用的裝置上。
 開發者無法從後台查看、下載或復原任何人的糖盒。</p>
 
 <div class="card">
-<h3>一、我們不薛集的資料</h3>
-<p>本 App 不要求您註冊，也不薛集您或您客戶的姓名、電子郵件、電話、通訊錄或精確位置。
-沒有我們自行營運的使用行為分析。客戶名單、標籤、模組設定與備註
+<h3>一、我們不蒐集的資料</h3>
+<p>本 App 不要求您註冊，也不蒐集您或您客戶的姓名、電子郵件、電話、通訊錄或精確位置。
+沒有我們自行營運的使用行為分析。客戶名單、標籤、模組設定、備註與頭像
 <strong>從來不會上傳到開發者的伺服器</strong>——因為根本沒有這樣的伺服器。</p>
 </div>
 
@@ -74,11 +74,14 @@
 <h3>二、資料存在哪裡</h3>
 <ul>
   <li><strong>日常使用：</strong>瀏覽器本機的 IndexedDB（資料庫名稱
-      <code>bonbon-sugarbox</code>）裡，以 SQLite 檔保存。</li>
-  <li><strong>介面狀態：</strong>本機可能另存極少量標記（例如是否已載入過範例資料），
+      <code>bonbon-sugarbox</code>）裡，文字與模組以 SQLite 檔保存；
+      每位客戶最多一張頭像（壓縮後的 JPEG）另存在同一個資料庫的相片區。
+      iOS App 則把 SQLite 與頭像寫進 App 沙盒檔案，不經過開發者伺服器。</li>
+  <li><strong>介面狀態：</strong>本機可能另存極少量標記（例如是否已載入過示範資料、語系與主題），
       同樣不離開這台裝置。</li>
   <li><strong>帶走／備份：</strong>只有在您自己按下匯出時，才會在這台裝置上產生
-      <code>.bonbon</code> 或 <code>.sqlite</code> 檔。</li>
+      <code>.bonbon</code> 檔（加密或未加密的 <code>-open</code> 版都會包進頭像）。
+      單獨的 <code>.sqlite</code> 不含相片。</li>
   <li><strong>雲端：</strong>只有在您把該檔存進自己的 Google Drive、iCloud、檔案 App
       或其他空間時，資料才會離開這台裝置。那個空間是您的帳號，不是我們的。</li>
 </ul>
@@ -144,14 +147,14 @@
 <a href="https://bonbon.fish-zero.com/">bonbon.fish-zero.com</a>, "the App")
 is an offline customer notebook. The App <strong>has no accounts and no
 server-side customer database</strong>. Names, phone numbers, birthdays, notes,
-tags, preferences and similar customer content stay on the device you are using.
+tags, preferences, portraits and similar customer content stay on the device you are using.
 The developer cannot view, download or recover anyone's box from a backend.</p>
 
 <div class="card">
 <h3>1. What we do not collect</h3>
 <p>The App does not ask you to register, and does not collect your (or your
 customers') name, email, phone number, contacts or precise location. We do not
-run our own analytics. Customer lists, tags, module settings and notes
+run our own analytics. Customer lists, tags, module settings, notes and portraits
 <strong>are never uploaded to the developer's servers</strong> — there is no
 such server.</p>
 </div>
@@ -160,11 +163,17 @@ such server.</p>
 <h3>2. Where data lives</h3>
 <ul>
   <li><strong>Day to day:</strong> in the browser's IndexedDB (database
-      <code>bonbon-sugarbox</code>) as a SQLite file.</li>
+      <code>bonbon-sugarbox</code>). Text and modules live in a SQLite file;
+      each customer may have one compressed JPEG portrait in a separate photo
+      store. The iOS app writes both SQLite and portraits into the app sandbox,
+      never to a developer server.</li>
   <li><strong>UI flags:</strong> a tiny local marker may be stored (for example
-      whether demo data was already seeded). It does not leave the device.</li>
-  <li><strong>Takeaway / backup:</strong> a <code>.bonbon</code> or
-      <code>.sqlite</code> file is created on this device only when you export.</li>
+      whether demo data was already seeded, plus language and theme). It does
+      not leave the device.</li>
+  <li><strong>Takeaway / backup:</strong> a <code>.bonbon</code> file is created
+      on this device only when you export. Encrypted and unencrypted
+      (<code>-open</code>) backups both include portraits. A raw
+      <code>.sqlite</code> file does not.</li>
   <li><strong>Cloud:</strong> data leaves the device only if you save that file
       to your own Google Drive, iCloud, Files app or other storage. That account
       is yours, not ours.</li>
@@ -246,14 +255,14 @@ This page is the canonical text. App policies are collected at
 <a href="https://bonbon.fish-zero.com/">bonbon.fish-zero.com</a>、以下「本アプリ」）
 はオフラインの顧客ノートです。本アプリには<strong>アカウントも、サーバー側の
 顧客データベースもありません</strong>。氏名、電話番号、誕生日、メモ、タグ、体況、
-好みなどの顧客内容は、お使いの端末内にだけ保存されます。開發者がバックエンドから
+好み、顔写真などの顧客内容は、お使いの端末内にだけ保存されます。開発者がバックエンドから
 誰かのボックスを閲覧・ダウンロード・復元することはできません。</p>
 
 <div class="card">
 <h3>1. 収集しない情報</h3>
 <p>本アプリは登録を求めず、あなたや顧客の氏名、メール、電話番号、連絡先、正確な
-位置情報を収集しません。開發者独自の利用解析もありません。顧客名簿、タグ、
-モジュール設定、メモが<strong>開發者のサーバーへアップロードされることはありません</strong>。
+位置情報を収集しません。開発者独自の利用解析もありません。顧客名簿、タグ、
+モジュール設定、メモ、顔写真が<strong>開発者のサーバーへアップロードされることはありません</strong>。
 そのようなサーバー自体が存在しないためです。</p>
 </div>
 
@@ -261,14 +270,17 @@ This page is the canonical text. App policies are collected at
 <h3>2. データの保存場所</h3>
 <ul>
   <li><strong>日常利用：</strong>ブラウザの IndexedDB（データベース名
-      <code>bonbon-sugarbox</code>）内の SQLite ファイル。</li>
-  <li><strong>画面状態：</strong>デモデータを読み込み済みか、などごく少量の印を
+      <code>bonbon-sugarbox</code>）。文字とモジュールは SQLite ファイル、
+      顧客ごとの顔写真（圧縮 JPEG、1人1枚）は別の写真領域に置きます。
+      iOS アプリは SQLite と顔写真を App サンドボックスへ書き、開発者サーバーは使いません。</li>
+  <li><strong>画面状態：</strong>デモデータを読み込み済みか、言語・テーマなどごく少量の印を
       端末内に置く場合があります。端末の外には出ません。</li>
   <li><strong>持ち出し／バックアップ：</strong>書き出しを実行したときだけ、この
-      端末上に <code>.bonbon</code> または <code>.sqlite</code> が作られます。</li>
+      端末上に <code>.bonbon</code> が作られます。暗号化版も未暗号化の
+      <code>-open</code> 版も顔写真を同梱します。単独の <code>.sqlite</code> には写真は入りません。</li>
   <li><strong>クラウド：</strong>そのファイルを自分の Google Drive、iCloud、
       ファイルアプリ等へ保存したときに限り、データは端末を離れます。その口座は
-      あなたのものであり、開發者のものではありません。</li>
+      あなたのものであり、開発者のものではありません。</li>
 </ul>
 <p>端末やブラウザを替える、またはサイトデータを消すと、書き出していなければ
 ローカルのボックスは消えます。パソコン・スマホ・タブレットは同じバックアップ
@@ -280,7 +292,7 @@ This page is the canonical text. App policies are collected at
 <h3>3. 暗号化バックアップ</h3>
 <p>書き出し時にパスフレーズを設定できます。ファイルはこの端末上で PBKDF2 由来の
 鍵と AES-GCM により暗号化されてから作られます。パスフレーズは送信されず、
-ファイルにも書かれず、開發者にも分かりません。紛失すると開けません。
+ファイルにも書かれず、開発者にも分かりません。紛失すると開けません。
 「パスワードを忘れた」機能はありません。</p>
 <p>パスフレーズはご自身のパスワードマネージャに保存し、バックアップと同じ
 クラウドフォルダには置かないでください。</p>
@@ -292,7 +304,7 @@ This page is the canonical text. App policies are collected at
 どのクラウド口座を使うか、誰が開けるか、パスフレーズの渡し方、端末のロックは
 すべてあなたの判断と責任です。</p>
 <ul>
-  <li>開發者は顧客データの副本を持たないため、「クラウド上の名簿」の開示・訂正・
+  <li>開発者は顧客データの副本を持たないため、「クラウド上の名簿」の開示・訂正・
       削除を求められても対応できません。それらのファイルは私たちの手元にないからです。</li>
   <li>利用中のクラウドサービスで漏洩・紛失・不正利用が起きた場合は、その事業者へ
       お問い合わせください。</li>
@@ -313,7 +325,7 @@ This page is the canonical text. App policies are collected at
 <p>Grok App Builder 経由の公開版は、Grok の画面用スクリプト（例：「Created with
 Grok」表示）を読み込むことがあります。提供元は xAI／Grok で、顧客データベースの
 中身は受け取りません。</p>
-<p>本アプリには<strong>広告 SDK、ログイン、開發者自身のトラッキングピクセルはありません</strong>。</p>
+<p>本アプリには<strong>広告 SDK、ログイン、開発者自身のトラッキングピクセルはありません</strong>。</p>
 </div>
 
 <div class="card">
