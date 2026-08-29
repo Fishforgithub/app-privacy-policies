@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bonbon 糖盒 — 隱私權政策 / Privacy Policy / プライバシーポリシー</title>
+<style>
+  :root { color-scheme: light dark; --fg: #1c1e26; --dim: #5b6272; --bg: #f7f8fb;
+          --card: #fff; --line: #dfe3ec; --accent: #2563eb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg: #e3e6f0; --dim: #9aa1b5; --bg: #12141c; --card: #191c26;
+            --line: #2b2f3d; --accent: #89b4fa; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 0 20px 80px; background: var(--bg); color: var(--fg);
+         font: 16px/1.75 system-ui, -apple-system, "Noto Sans TC", "Noto Sans JP", sans-serif; }
+  main { max-width: 720px; margin: 0 auto; }
+  header { padding: 48px 0 24px; border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+  h1 { font-size: 26px; margin: 0 0 6px; letter-spacing: .01em; }
+  .sub { color: var(--dim); font-size: 14px; margin: 0; }
+  nav { position: sticky; top: 0; background: var(--bg); padding: 14px 0;
+        border-bottom: 1px solid var(--line); margin-bottom: 32px; z-index: 1; }
+  nav a { display: inline-block; margin-right: 16px; color: var(--accent);
+          text-decoration: none; font-size: 14px; font-weight: 600; }
+  nav a:hover { text-decoration: underline; }
+  section { padding-top: 24px; }
+  h2 { font-size: 21px; margin: 40px 0 4px; padding-top: 12px; }
+  h3 { font-size: 16px; margin: 28px 0 6px; }
+  p, li { color: var(--fg); }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+          padding: 4px 20px 18px; margin: 18px 0; }
+  .updated { color: var(--dim); font-size: 14px; }
+  a { color: var(--accent); }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line);
+           color: var(--dim); font-size: 13px; }
+  code { background: var(--card); border: 1px solid var(--line); border-radius: 4px;
+         padding: 1px 5px; font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Bonbon 糖盒</h1>
+  <p class="sub">隱私權政策 · Privacy Policy · プライバシーポリシー</p>
+</header>
+
+<nav>
+  <a href="#zh">繁體中文</a>
+  <a href="#en">English</a>
+  <a href="#ja">日本語</a>
+</nav>
+
+<section id="zh">
+<h2>隱私權政策（繁體中文）</h2>
+<p class="updated">最後更新：2026 年 8 月 29 日</p>
+
+<p>「Bonbon 糖盒」（程式名稱 <code>bonboncrm</code>，網站
+<a href="https://bonbon.fish-zero.com/">bonbon.fish-zero.com</a>，以下稱「本 App」）
+是一款離線客戶本。本 App <strong>沒有帳號系統、沒有伺服器端客戶資料庫</strong>。
+姓名、電話、生日、備註、標籤、體況、喜好等客戶內容只寫在您正在使用的裝置上。
+開發者無法從後台查看、下載或復原任何人的糖盒。</p>
+
+<div class="card">
+<h3>一、我們不薛集的資料</h3>
+<p>本 App 不要求您註冊，也不薛集您或您客戶的姓名、電子郵件、電話、通訊錄或精確位置。
+沒有我們自行營運的使用行為分析。客戶名單、標籤、模組設定與備註
+<strong>從來不會上傳到開發者的伺服器</strong>——因為根本沒有這樣的伺服器。</p>
+</div>
+
+<div class="card">
+<h3>二、資料存在哪裡</h3>
+<ul>
+  <li><strong>日常使用：</strong>瀏覽器本機的 IndexedDB（資料庫名稱
+      <code>bonbon-sugarbox</code>）裡，以 SQLite 檔保存。</li>
+  <li><strong>介面狀態：</strong>本機可能另存極少量標記（例如是否已載入過範例資料），
+      同樣不離開這台裝置。</li>
+  <li><strong>帶走／備份：</strong>只有在您自己按下匯出時，才會在這台裝置上產生
+      <code>.bonbon</code> 或 <code>.sqlite</code> 檔。</li>
+  <li><strong>雲端：</strong>只有在您把該檔存進自己的 Google Drive、iCloud、檔案 App
+      或其他空間時，資料才會離開這台裝置。那個空間是您的帳號，不是我們的。</li>
+</ul>
+<p>換裝置、換瀏覽器或清除網站資料，本機糖盒就會消失，除非您先匯出再匯入。
+電腦、手機、平板讀同一種備份檔；這<strong>不是即時同步</strong>，最後匯入的那台會覆蓋該裝置上的舊資料。</p>
+</div>
+
+<div class="card">
+<h3>三、加密備份</h3>
+<p>匯出時可設口令。檔案會在這台裝置上以 PBKDF2 衍生金鑰、AES-GCM 加密後才產生。
+口令不上傳、不寫進檔案、開發者也不知道。遺失口令就無法開啟備份，沒有「忘記密碼」。</p>
+<p>請把口令記在您自己的密碼管理器，不要跟備份檔放在同一個雲端資料夾。</p>
+</div>
+
+<div class="card">
+<h3>四、個人資料（PII）保管責任在使用者</h3>
+<p>您（以及您任職的店家）是這份客戶資料的<strong>保管者</strong>。把檔案放到誰的雲端、
+誰能打開那個雲端帳號、口令怎麼傳、裝置會不會被別人解鎖，都由您決定與負責。</p>
+<ul>
+  <li>本 App 開發者不持有客戶資料副本，無法應要求提供、更正或刪除「雲端上的名單」——
+      那些檔案不在我們手上。</li>
+  <li>您選擇的雲端服務若外洩、遺失或遭盜用，應向該服務商處理。</li>
+  <li>請只讓需要看客戶資料的人員使用這台裝置與雲端資料夾；離職或停用裝置時，
+      請匯出後清除網站資料，並從共用雲端移除備份。</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>五、網站託管與第三方</h3>
+<p>第一次開啟本 App 時，瀏覽器會向託管網站的主機下載網頁、程式與 SQLite 引擎檔。
+該主機的存取紀錄可能包含 IP 位址、瀏覽器類型與時間，用途僅限運作與防濫用，
+<strong>不含客戶名單</strong>。</p>
+<p>本 App 介面可能向 Google Fonts 載入字型，因此 Google 可能看到您的 IP 位址與瀏覽器資訊，
+依 Google 自己的政策處理。核心客戶功能在字型載入失敗時仍可使用。</p>
+<p>由 Grok App Builder 發布的版本可能載入 Grok 的介面腳本（例如「Created with Grok」標記）。
+該腳本由 xAI／Grok 提供，不接收您的客戶資料庫內容。</p>
+<p>本 App <strong>沒有廣告 SDK、沒有登入、沒有開發者自行埋的追蹤像素</strong>。</p>
+</div>
+
+<div class="card">
+<h3>六、兒童</h3>
+<p>本 App 是給店家或個人管理客戶用的工具，並非以兒童為主要對象。
+若您把未成年人資料寫進糖盒，保管責任仍在您，請遵守您所在地關於兒童個人資料的法令。</p>
+</div>
+
+<div class="card">
+<h3>七、保存、刪除、政策變更與聯絡方式</h3>
+<p>刪除客戶、重置範例資料、或在瀏覽器清除本站資料，只影響這台裝置。
+雲端裡您自己放的備份檔，要由您在該雲端刪除。</p>
+<p>本政策若有修訂，會更新本頁最上方的日期。完整條款以本頁為準，
+各 App 政策集中放在
+<a href="https://fishforgithub.github.io/app-privacy-policies/">app-privacy-policies</a>。</p>
+<p>對本政策有任何疑問，請來信：
+<a href="mailto:fish@coss.com.tw">fish@coss.com.tw</a></p>
+</div>
+</section>
+
+<section id="en" lang="en">
+<h2>Privacy Policy (English)</h2>
+<p class="updated">Last updated: 29 August 2026</p>
+
+<p>Bonbon 糖盒 (package <code>bonboncrm</code>, site
+<a href="https://bonbon.fish-zero.com/">bonbon.fish-zero.com</a>, "the App")
+is an offline customer notebook. The App <strong>has no accounts and no
+server-side customer database</strong>. Names, phone numbers, birthdays, notes,
+tags, preferences and similar customer content stay on the device you are using.
+The developer cannot view, download or recover anyone's box from a backend.</p>
+
+<div class="card">
+<h3>1. What we do not collect</h3>
+<p>The App does not ask you to register, and does not collect your (or your
+customers') name, email, phone number, contacts or precise location. We do not
+run our own analytics. Customer lists, tags, module settings and notes
+<strong>are never uploaded to the developer's servers</strong> — there is no
+such server.</p>
+</div>
+
+<div class="card">
+<h3>2. Where data lives</h3>
+<ul>
+  <li><strong>Day to day:</strong> in the browser's IndexedDB (database
+      <code>bonbon-sugarbox</code>) as a SQLite file.</li>
+  <li><strong>UI flags:</strong> a tiny local marker may be stored (for example
+      whether demo data was already seeded). It does not leave the device.</li>
+  <li><strong>Takeaway / backup:</strong> a <code>.bonbon</code> or
+      <code>.sqlite</code> file is created on this device only when you export.</li>
+  <li><strong>Cloud:</strong> data leaves the device only if you save that file
+      to your own Google Drive, iCloud, Files app or other storage. That account
+      is yours, not ours.</li>
+</ul>
+<p>Changing device or browser, or clearing site data, wipes the local box unless
+you exported first. Desktop, phone and tablet all read the same backup file.
+This is <strong>not live sync</strong>: the last import on a device overwrites
+what was already there.</p>
+</div>
+
+<div class="card">
+<h3>3. Encrypted backups</h3>
+<p>You may set a passphrase on export. The file is encrypted on this device with
+a PBKDF2-derived key and AES-GCM before it is written. The passphrase is not
+uploaded, not stored in the file, and not known to the developer. If you lose
+it, the backup cannot be opened. There is no "forgot password".</p>
+<p>Keep the passphrase in your own password manager. Do not store it in the same
+cloud folder as the backup file.</p>
+</div>
+
+<div class="card">
+<h3>4. You are the controller of PII</h3>
+<p>You (and the shop you work for) are the <strong>custodian</strong> of this
+customer data. Who can open the cloud account, how the passphrase is shared, and
+whether a device is unlocked by someone else are your decisions and your
+responsibility.</p>
+<ul>
+  <li>The developer does not hold a copy of customer data and cannot produce,
+      correct or delete a "cloud copy of the list" on request — those files are
+      not in our possession.</li>
+  <li>If the cloud service you chose is breached, lost or misused, take that up
+      with that provider.</li>
+  <li>Give device and folder access only to people who need the customer book.
+      When someone leaves or a device is retired, export, clear site data, and
+      remove backups from shared cloud folders.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>5. Hosting and third parties</h3>
+<p>The first time you open the App, the browser downloads the page, scripts and
+the SQLite engine from the site host. That host's access logs may include IP
+address, browser type and time, used only to run and protect the site —
+<strong>not the customer list</strong>.</p>
+<p>The interface may load fonts from Google Fonts, so Google may see your IP
+address and browser information under Google's own policy. Core customer
+features still work if fonts fail to load.</p>
+<p>Builds published through Grok App Builder may load a Grok interface script
+(for example a "Created with Grok" mark). That script is provided by xAI / Grok
+and does not receive the contents of your customer database.</p>
+<p>The App has <strong>no ad SDK, no sign-in, and no tracking pixel operated by
+the developer</strong>.</p>
+</div>
+
+<div class="card">
+<h3>6. Children</h3>
+<p>The App is a customer notebook for shops and individuals. It is not directed
+primarily at children. If you store a minor's details in the box, you remain
+the custodian and must follow the child-privacy laws that apply to you.</p>
+</div>
+
+<div class="card">
+<h3>7. Retention, deletion, changes, and contact</h3>
+<p>Deleting a customer, resetting demo data, or clearing this site in the
+browser only affects this device. Backups you placed in a cloud folder must be
+deleted there by you.</p>
+<p>If this policy changes, the date at the top of this page will be updated.
+This page is the canonical text. App policies are collected at
+<a href="https://fishforgithub.github.io/app-privacy-policies/">app-privacy-policies</a>.</p>
+<p>Questions? Email <a href="mailto:fish@coss.com.tw">fish@coss.com.tw</a></p>
+</div>
+</section>
+
+<section id="ja" lang="ja">
+<h2>プライバシーポリシー（日本語）</h2>
+<p class="updated">最終更新日：2026年8月29日</p>
+
+<p>「Bonbon 糖盒」（パッケージ名 <code>bonboncrm</code>、サイト
+<a href="https://bonbon.fish-zero.com/">bonbon.fish-zero.com</a>、以下「本アプリ」）
+はオフラインの顧客ノートです。本アプリには<strong>アカウントも、サーバー側の
+顧客データベースもありません</strong>。氏名、電話番号、誕生日、メモ、タグ、体況、
+好みなどの顧客内容は、お使いの端末内にだけ保存されます。開發者がバックエンドから
+誰かのボックスを閲覧・ダウンロード・復元することはできません。</p>
+
+<div class="card">
+<h3>1. 収集しない情報</h3>
+<p>本アプリは登録を求めず、あなたや顧客の氏名、メール、電話番号、連絡先、正確な
+位置情報を収集しません。開發者独自の利用解析もありません。顧客名簿、タグ、
+モジュール設定、メモが<strong>開發者のサーバーへアップロードされることはありません</strong>。
+そのようなサーバー自体が存在しないためです。</p>
+</div>
+
+<div class="card">
+<h3>2. データの保存場所</h3>
+<ul>
+  <li><strong>日常利用：</strong>ブラウザの IndexedDB（データベース名
+      <code>bonbon-sugarbox</code>）内の SQLite ファイル。</li>
+  <li><strong>画面状態：</strong>デモデータを読み込み済みか、などごく少量の印を
+      端末内に置く場合があります。端末の外には出ません。</li>
+  <li><strong>持ち出し／バックアップ：</strong>書き出しを実行したときだけ、この
+      端末上に <code>.bonbon</code> または <code>.sqlite</code> が作られます。</li>
+  <li><strong>クラウド：</strong>そのファイルを自分の Google Drive、iCloud、
+      ファイルアプリ等へ保存したときに限り、データは端末を離れます。その口座は
+      あなたのものであり、開發者のものではありません。</li>
+</ul>
+<p>端末やブラウザを替える、またはサイトデータを消すと、書き出していなければ
+ローカルのボックスは消えます。パソコン・スマホ・タブレットは同じバックアップ
+形式を読みます。これは<strong>リアルタイム同期ではありません</strong>。その端末で
+最後に読み込んだ内容が、以前のローカルデータを上書きします。</p>
+</div>
+
+<div class="card">
+<h3>3. 暗号化バックアップ</h3>
+<p>書き出し時にパスフレーズを設定できます。ファイルはこの端末上で PBKDF2 由来の
+鍵と AES-GCM により暗号化されてから作られます。パスフレーズは送信されず、
+ファイルにも書かれず、開發者にも分かりません。紛失すると開けません。
+「パスワードを忘れた」機能はありません。</p>
+<p>パスフレーズはご自身のパスワードマネージャに保存し、バックアップと同じ
+クラウドフォルダには置かないでください。</p>
+</div>
+
+<div class="card">
+<h3>4. 個人情報（PII）の保管責任は利用者にあります</h3>
+<p>あなた（および勤務先の店舗）が、この顧客データの<strong>保管者</strong>です。
+どのクラウド口座を使うか、誰が開けるか、パスフレーズの渡し方、端末のロックは
+すべてあなたの判断と責任です。</p>
+<ul>
+  <li>開發者は顧客データの副本を持たないため、「クラウド上の名簿」の開示・訂正・
+      削除を求められても対応できません。それらのファイルは私たちの手元にないからです。</li>
+  <li>利用中のクラウドサービスで漏洩・紛失・不正利用が起きた場合は、その事業者へ
+      お問い合わせください。</li>
+  <li>顧客データを見る必要がある人にだけ端末とフォルダを渡してください。退職や
+      端末の廃棄時は書き出したうえでサイトデータを消し、共有クラウドから
+      バックアップを削除してください。</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>5. ホスティングと第三者</h3>
+<p>初回起動時、ブラウザはページ、スクリプト、SQLite エンジンをサイトのホストから
+ダウンロードします。ホストのアクセスログには IP アドレス、ブラウザの種類、時刻が
+残る場合があります。サイトの運用と不正防止のためであり、<strong>顧客名簿は含みません</strong>。</p>
+<p>画面は Google Fonts からフォントを読み込むことがあり、その場合 Google が IP
+アドレスとブラウザ情報を、Google 自身のポリシーに基づいて扱う可能性があります。
+フォントが読めなくても顧客機能は使えます。</p>
+<p>Grok App Builder 経由の公開版は、Grok の画面用スクリプト（例：「Created with
+Grok」表示）を読み込むことがあります。提供元は xAI／Grok で、顧客データベースの
+中身は受け取りません。</p>
+<p>本アプリには<strong>広告 SDK、ログイン、開發者自身のトラッキングピクセルはありません</strong>。</p>
+</div>
+
+<div class="card">
+<h3>6. お子様について</h3>
+<p>本アプリは店舗や個人が顧客を管理するための道具であり、子供向けを主目的とは
+していません。未成年者の情報をボックスに書いた場合も、保管者はあなたです。
+適用される子供の個人情報に関する法令を守ってください。</p>
+</div>
+
+<div class="card">
+<h3>7. 保存、削除、変更、お問い合わせ</h3>
+<p>顧客の削除、サンプルデータのリセット、ブラウザでこのサイトのデータを消す操作は
+この端末にだけ効きます。クラウドに置いたバックアップは、そちらでご自身が
+削除する必要があります。</p>
+<p>本ポリシーを改訂した場合は、ページ冒頭の日付を更新します。正文はこのページです。
+各アプリの政策は
+<a href="https://fishforgithub.github.io/app-privacy-policies/">app-privacy-policies</a>
+にまとめています。</p>
+<p>ご質問は <a href="mailto:fish@coss.com.tw">fish@coss.com.tw</a> までご連絡ください。</p>
+</div>
+</section>
+
+<footer>
+  Bonbon 糖盒 · bonboncrm<br>
+  © 2026 Fish. Canonical policy for this App. Source:
+  <a href="https://github.com/Fishforgithub/bonboncrm">Fishforgithub/bonboncrm</a>
+</footer>
+
+</main>
+</body>
+</html>
