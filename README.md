@@ -21,3 +21,9 @@
 
 政策內容的來源在各自 App 的 repo（例如 PicoPdfViewer 的
 `docs/privacy.html`），改完之後要手動複製過來這裡再推——兩邊不會自動同步。
+
+目前共用政策路徑：
+
+- `multiqrscan/` — MultiQRScan - 多碼捕捉快速掃描器
+- `picopdf/` — Pico PDF Viewer
+- `bonboncrm/` — Bonbon 糖盒
