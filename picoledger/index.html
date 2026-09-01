@@ -91,7 +91,7 @@
 本機、從未被傳送出去的「加密金鑰」。伺服器收到的登入密碼，經過一層與這把加密金鑰完全無關的
 轉換——即使伺服器遭入侵，也無法從中還原出你的加密金鑰。你的交易紀錄、分類、備註、貸款、
 存錢目標等所有帳本內容，一律先在本機以 AES-256-GCM 加密才會上傳；我們資料庫裡看到的只是一段
-無法解讀的亂碼。在 Android 上，這把金鑰是存放在系統的硬體金鑰庫（Android Keystore）中。</p>
+無法解讀的亂碼。這把金鑰存放在系統提供的硬體保護金鑰庫中——Android 上是 Android Keystore，iOS 上是 Keychain。</p>
 
 <p><strong>這個保護的實際範圍（請容我們誠實說明限制）：</strong></p>
 <ul>
@@ -131,6 +131,7 @@
 <ul>
   <li>Google 如何在合作夥伴網站與 App 使用資料：<a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></li>
   <li>你可以在 Android 系統的「設定 → Google → 廣告」中重設或刪除廣告 ID、關閉廣告個人化。</li>
+  <li>在 iOS 上，本 App 會依 Apple「App 追蹤透明度」（ATT）規範，於需要用於個人化廣告時請求你的授權；你可以隨時在系統「設定 → 隱私權與安全性 → 追蹤」中調整每個 App 的授權。</li>
   <li>在適用歐盟／英國法規的地區，首次顯示廣告前會出現 Google 的使用者同意訊息（UMP），你可以在其中選擇是否同意個人化廣告。</li>
 </ul>
 <p><strong>購買「去廣告」或「終身解鎖」之後，本 App 不會再初始化廣告 SDK</strong>——不是把廣告藏起來，
@@ -148,16 +149,17 @@
 <h3>七、其他第三方服務</h3>
 <ul>
   <li><strong>Google Play 服務／Google Play 帳單</strong>：購買與購買驗證（見第六節）。</li>
-  <li><strong>Google Play 應用程式內評論 API</strong>：當你已記帳滿一定筆數且本裝置尚未詢問過時，本 App 會呼叫 Google 官方的評分視窗。整個流程由 Google 處理，<strong>本 App 不會得知你是否評分、評了幾顆星</strong>。</li>
+  <li><strong>應用程式內評論 API</strong>：當你已記帳滿一定筆數且本裝置尚未詢問過時，本 App 會呼叫平台官方的評分視窗（Android 為 Google Play 應用程式內評論 API，iOS 為 Apple 的 <code>SKStoreReviewController</code>）。整個流程由平台處理，<strong>本 App 不會得知你是否評分、評了幾顆星</strong>。</li>
   <li><strong>Cloudflare</strong>：作為我們伺服器對外的連線通道與防護層。</li>
   <li><strong>Google Fonts</strong>：轉出 PDF 年度報告時，報告版面會嘗試載入網路字型以取得最佳排版；載入失敗（例如離線）時會自動改用系統字型，不影響轉出。</li>
-  <li><strong>系統列印服務</strong>：「轉出 PDF」是交給 Android 內建的列印／儲存為 PDF 功能完成的，檔案存放位置由你在系統對話框中自行選擇。本 App 不會讀取、上傳或保留你存出的 PDF。</li>
+  <li><strong>系統列印服務</strong>：「轉出 PDF」是交給作業系統內建的列印／儲存為 PDF 功能完成的（Android 與 iOS 皆同），檔案存放位置由你在系統對話框中自行選擇。本 App 不會讀取、上傳或保留你存出的 PDF。</li>
 </ul>
 
 <h3>八、權限</h3>
-<p>本 App 只宣告一項權限：<strong>網際網路存取（INTERNET）</strong>，用於雲端同步、廣告與購買驗證。
-本 App <strong>不要求</strong>存取你的相機、麥克風、通訊錄、簡訊、通話紀錄、精確位置或相簿，
-也不要求儲存空間權限（轉出 PDF 由系統列印服務處理）。</p>
+<p>在 Android 上，本 App 只宣告一項權限：<strong>網際網路存取（INTERNET）</strong>，用於雲端同步、
+廣告與購買驗證。iOS 沒有對應的「網路權限宣告」機制，App 本來就能連網；廣告個人化牽涉的追蹤授權
+請求已列在上一節。<strong>兩個平台上</strong>，本 App 都<strong>不要求</strong>存取你的相機、麥克風、通訊錄、
+簡訊、通話紀錄、精確位置或相簿，也不要求額外的儲存空間權限（轉出 PDF 由系統列印服務處理）。</p>
 
 <h3>九、兒童</h3>
 <p>本 App 並非以 13 歲以下兒童為對象設計，我們也不會刻意向兒童收集個人資料。
@@ -214,8 +216,8 @@ ciphertext that we cannot read.</p>
 encryption key that exists only locally and is never transmitted. The password value that reaches
 the server goes through a separate transformation that is unrelated to that encryption key — even
 if the server were breached, the encryption key could not be recovered from it. All ledger content
-is encrypted locally with AES-256-GCM before upload; our database holds an opaque blob. On Android
-the key is held in the system’s hardware-backed keystore (Android Keystore).</p>
+is encrypted locally with AES-256-GCM before upload; our database holds an opaque blob. The key is
+held in the system’s hardware-backed keystore — Android Keystore on Android, the Keychain on iOS.</p>
 
 <p><strong>The honest limits of this protection:</strong></p>
 <ul>
@@ -257,6 +259,7 @@ ledger content, email address, or any account information to the ad service.</st
 <ul>
   <li>How Google uses data from sites and apps that use its services: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></li>
   <li>You can reset or delete your advertising ID and turn off ad personalisation under <em>Settings → Google → Ads</em> on Android.</li>
+  <li>On iOS, the App asks for your permission under Apple’s App Tracking Transparency (ATT) framework whenever it needs to use tracking data for ad personalisation; you can change any app’s permission at any time under <em>Settings → Privacy & Security → Tracking</em>.</li>
   <li>Where EU/UK rules apply, Google’s consent message (UMP) is shown before ads appear, and you choose there whether to allow personalised ads.</li>
 </ul>
 <p><strong>After buying “remove ads” or the lifetime unlock, the App no longer initialises the ad SDK</strong> —
@@ -276,17 +279,19 @@ account.</p>
 <h3>7. Other third-party services</h3>
 <ul>
   <li><strong>Google Play services / Google Play Billing</strong> — purchases and purchase verification (section 6).</li>
-  <li><strong>Google Play In-App Review API</strong> — once you have recorded a certain number of entries and this device has not been asked before, the App calls Google’s official rating dialog. Google handles the whole flow; <strong>the App is not told whether you rated it or what score you gave</strong>.</li>
+  <li><strong>In-app review API</strong> — once you have recorded a certain number of entries and this device has not been asked before, the App calls the platform’s own rating dialog (the Google Play In-App Review API on Android, Apple’s <code>SKStoreReviewController</code> on iOS). The platform handles the whole flow; <strong>the App is not told whether you rated it or what score you gave</strong>.</li>
   <li><strong>Cloudflare</strong> — the network path and protection layer in front of our server.</li>
   <li><strong>Google Fonts</strong> — the annual PDF report tries to load web fonts for best typography; if that fails (for example offline) it falls back to system fonts and the export still works.</li>
-  <li><strong>System print service</strong> — “Export PDF” is handed to Android’s built-in print / save-as-PDF function, and you choose where the file is saved. The App does not read, upload, or retain the PDF you saved.</li>
+  <li><strong>System print service</strong> — “Export PDF” is handed to the operating system’s built-in print / save-as-PDF function (on both Android and iOS), and you choose where the file is saved. The App does not read, upload, or retain the PDF you saved.</li>
 </ul>
 
 <h3>8. Permissions</h3>
-<p>The App declares exactly one permission: <strong>INTERNET</strong>, used for cloud sync, ads, and purchase
-verification. It does <strong>not</strong> request access to your camera, microphone, contacts, SMS, call logs,
-precise location, or photo library, and it does not request storage permission (PDF export is
-handled by the system print service).</p>
+<p>On Android, the App declares exactly one permission — <strong>INTERNET</strong> — used for cloud sync, ads,
+and purchase verification. iOS has no equivalent network-access permission to declare; the
+tracking-authorization prompt tied to ad personalisation is covered in the previous section.
+<strong>On both platforms</strong>, the App never requests access to your camera, microphone, contacts, SMS,
+call logs, precise location, or photo library, and it does not request extra storage permission
+(PDF export is handled by the system print service).</p>
 
 <h3>9. Children</h3>
 <p>The App is not directed at children under 13, and we do not knowingly collect personal data from
@@ -344,8 +349,8 @@ contact us and we will delete it promptly.</p>
 のみ存在し、送信されることはありません。サーバーに届くパスワードは、この暗号鍵とはまったく無関係な
 変換を経ています。仮にサーバーが侵害されても、そこから暗号鍵を復元することはできません。取引記録、
 分類、メモ、ローン、貯蓄目標などの帳簿内容はすべて、端末上で AES-256-GCM により暗号化されてから
-アップロードされます。Android ではこの鍵はハードウェア保護されたキーストア（Android Keystore）に
-保管されます。</p>
+アップロードされます。この鍵はシステムが提供するハードウェア保護のキーストアに保管されます——
+Android では Android Keystore、iOS では Keychain です。</p>
 
 <p><strong>この保護の範囲（限界も正直に記します）：</strong></p>
 <ul>
@@ -386,6 +391,7 @@ IP アドレスから推定されるおおよその位置情報を、広告の�
 <ul>
   <li>Google がパートナーのサイト・アプリで情報を使用する方法：<a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></li>
   <li>Android の「設定 → Google → 広告」で広告 ID のリセット・削除、広告のパーソナライズ無効化が可能です。</li>
+  <li>iOS では、個人化広告にトラッキングデータが必要な場合、Apple の「App 追跡の透明性」（ATT）規定に基づき許可を求めます。許可はいつでも「設定 → プライバシーとセキュリティ → トラッキング」から変更できます。</li>
   <li>EU／英国の規制が適用される地域では、広告表示前に Google の同意メッセージ（UMP）が表示されます。</li>
 </ul>
 <p><strong>「広告非表示」または「ライフタイム解除」を購入すると、本アプリは広告 SDK を初期化しなくなります。</strong>
@@ -404,16 +410,18 @@ IP アドレスから推定されるおおよその位置情報を、広告の�
 <h3>7. その他の第三者サービス</h3>
 <ul>
   <li><strong>Google Play サービス／Google Play 課金</strong>：購入と購入検証（第 6 節）。</li>
-  <li><strong>Google Play アプリ内レビュー API</strong>：一定の記録件数に達し、かつこの端末で未表示の場合に、Google 公式の評価ダイアログを呼び出します。処理は Google 側で完結し、<strong>評価したかどうか、何点かを本アプリが知ることはありません</strong>。</li>
+  <li><strong>アプリ内レビュー API</strong>：一定の記録件数に達し、かつこの端末で未表示の場合に、各プラットフォーム公式の評価ダイアログを呼び出します（Android は Google Play アプリ内レビュー API、iOS は Apple の <code>SKStoreReviewController</code>）。処理はプラットフォーム側で完結し、<strong>評価したかどうか、何点かを本アプリが知ることはありません</strong>。</li>
   <li><strong>Cloudflare</strong>：サーバー前段の通信経路・保護レイヤー。</li>
   <li><strong>Google Fonts</strong>：PDF 年間レポートの出力時に最適な組版のため Web フォントの読み込みを試みます。オフラインなどで失敗した場合はシステムフォントに切り替わり、出力は問題なく行えます。</li>
-  <li><strong>システム印刷サービス</strong>：「PDF に出力」は Android 標準の印刷／PDF 保存機能に引き渡され、保存先はお客様が選択します。本アプリが保存された PDF を読み取る・アップロード・保持することはありません。</li>
+  <li><strong>システム印刷サービス</strong>：「PDF に出力」は OS 標準の印刷／PDF 保存機能に引き渡され（Android・iOS 共通）、保存先はお客様が選択します。本アプリが保存された PDF を読み取る・アップロード・保持することはありません。</li>
 </ul>
 
 <h3>8. 権限</h3>
-<p>本アプリが宣言する権限は<strong>インターネット接続（INTERNET）</strong>のみで、クラウド同期・広告・購入検証に
-使用します。カメラ、マイク、連絡先、SMS、通話履歴、正確な位置情報、写真ライブラリへのアクセスは
-<strong>要求しません</strong>。ストレージ権限も要求しません（PDF 出力はシステムの印刷サービスが担当します）。</p>
+<p>Android では、本アプリが宣言する権限は<strong>インターネット接続（INTERNET）</strong>のみで、クラウド同期・
+広告・購入検証に使用します。iOS には対応する「ネットワーク権限」の宣言はなく、広告のパーソナライズに
+関わる追跡許可については前節をご参照ください。<strong>両プラットフォームとも</strong>、カメラ、マイク、
+連絡先、SMS、通話履歴、正確な位置情報、写真ライブラリへのアクセスは<strong>要求せず</strong>、
+追加のストレージ権限も要求しません（PDF 出力はシステムの印刷サービスが担当します）。</p>
 
 <h3>9. お子様について</h3>
 <p>本アプリは 13 歳未満のお子様を対象としておらず、お子様の個人情報を意図的に収集することはありません。
