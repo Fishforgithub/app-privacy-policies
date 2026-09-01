@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>餘裕 · PICO LEDGER — 刪除帳號與資料 / Delete your account and data</title>
+<style>
+  :root { color-scheme: light dark; --fg: #1c1e26; --dim: #5b6272; --bg: #f7f8fb;
+          --card: #fff; --line: #dfe3ec; --accent: #2563eb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg: #e3e6f0; --dim: #9aa1b5; --bg: #12141c; --card: #191c26;
+            --line: #2b2f3d; --accent: #89b4fa; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 0 20px 80px; background: var(--bg); color: var(--fg);
+         font: 16px/1.75 system-ui, -apple-system, "Noto Sans TC", "Noto Sans JP", sans-serif; }
+  main { max-width: 720px; margin: 0 auto; }
+  header { padding: 48px 0 24px; border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+  h1 { font-size: 26px; margin: 0 0 6px; }
+  .sub { color: var(--dim); font-size: 14px; margin: 0; }
+  h2 { font-size: 20px; margin: 40px 0 8px; }
+  h3 { font-size: 16px; margin: 24px 0 6px; }
+  ol, ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+          padding: 4px 20px 18px; margin: 18px 0; }
+  a { color: var(--accent); }
+  code { background: var(--card); border: 1px solid var(--line); border-radius: 4px;
+         padding: 1px 5px; font-size: 13px; }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line);
+           color: var(--dim); font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>餘裕 · PICO LEDGER</h1>
+  <p class="sub">刪除帳號與資料 · Delete your account and data · アカウントとデータの削除</p>
+</header>
+
+<h2>繁體中文</h2>
+<p>「餘裕 · PICO LEDGER」（<code>com.fish.picoledger</code>）<strong>不註冊帳號也能完整使用</strong>。
+只有在你主動啟用「雲端同步」時，才會有一個帳號與伺服器上的加密帳本副本。</p>
+
+<div class="card">
+<h3>方法一：在 App 內自行刪除（建議，立即生效）</h3>
+<ol>
+  <li>開啟本 App，進入「設定」。</li>
+  <li>在「雲端同步」區塊，確認已登入你要刪除的帳號。</li>
+  <li>點選「<strong>刪除帳號</strong>」，並在確認視窗再次確認。</li>
+</ol>
+<p>這會<strong>立即且永久</strong>刪除下列伺服器端資料，不需要等待人工處理：</p>
+<ul>
+  <li>你的帳號與電子郵件、密碼雜湊值</li>
+  <li>所有登入工作階段</li>
+  <li><strong>加密的帳本副本</strong>（含復原金鑰相關的加密欄位）</li>
+  <li>我們這邊的購買紀錄</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>方法二：來信要求刪除</h3>
+<p>如果你已經解除安裝本 App、無法登入，或不方便使用 App 內功能，請用
+<strong>當初註冊的電子郵件地址</strong>來信至
+<a href="mailto:fish@coss.com.tw?subject=PICO%20LEDGER%20帳號刪除要求">fish@coss.com.tw</a>，
+主旨寫「PICO LEDGER 帳號刪除要求」。我們會在<strong>收到後 7 個工作天內</strong>完成刪除並回信確認。
+為了避免有人冒名刪除他人帳號，我們只受理由該帳號本人的電子郵件地址寄出的要求。</p>
+</div>
+
+<h3>關於這台裝置上的資料</h3>
+<p>刪除帳號<strong>不會</strong>自動清除你手機裡的帳本。如果連本機資料也要一併清除，請解除安裝本 App，
+或到 Android 的「設定 → 應用程式 → 餘裕 · PICO LEDGER → 儲存空間 → 清除資料」。</p>
+
+<h3>關於已購買的項目</h3>
+<p>刪除帳號會一併刪除我們伺服器上的購買紀錄，但你的購買本身仍記錄在 Google Play。
+日後用同一個 Google 帳號重新註冊後，於 App 內點「恢復購買」即可取回權益。
+購買本身不會因為刪除帳號而失效，也不會因此自動退款。</p>
+
+<hr style="margin:48px 0;border:none;border-top:1px solid var(--line)">
+
+<h2>English</h2>
+<p>“餘裕 · PICO LEDGER” (<code>com.fish.picoledger</code>) is <strong>fully usable without an account</strong>.
+An account and a server-side encrypted ledger copy exist only if you enabled Cloud Sync yourself.</p>
+
+<div class="card">
+<h3>Option 1 — Delete it yourself in the app (recommended, immediate)</h3>
+<ol>
+  <li>Open the app and go to <em>Settings</em>.</li>
+  <li>In the <em>Cloud sync</em> section, make sure you are signed in to the account you want removed.</li>
+  <li>Tap <strong>Delete account</strong> and confirm in the dialog.</li>
+</ol>
+<p>This <strong>immediately and permanently</strong> deletes, with no manual processing:</p>
+<ul>
+  <li>your account, email address and password hash;</li>
+  <li>all sign-in sessions;</li>
+  <li>the <strong>encrypted ledger copy</strong> (including the recovery-key related encrypted fields);</li>
+  <li>our copy of your purchase records.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Option 2 — Request deletion by email</h3>
+<p>If you have already uninstalled the app, cannot sign in, or would rather not use the in-app
+option, email <a href="mailto:fish@coss.com.tw?subject=PICO%20LEDGER%20account%20deletion%20request">fish@coss.com.tw</a>
+<strong>from the address you registered with</strong>, with the subject “PICO LEDGER account deletion request”.
+We will complete the deletion and confirm by reply <strong>within 7 working days</strong>. To prevent someone
+deleting another person’s account, we only act on requests sent from the account’s own email address.</p>
+</div>
+
+<h3>Data on this device</h3>
+<p>Deleting the account does <strong>not</strong> wipe the ledger stored on your phone. To remove that too,
+uninstall the app, or use <em>Settings → Apps → 餘裕 · PICO LEDGER → Storage → Clear data</em>.</p>
+
+<h3>Purchases</h3>
+<p>Deleting the account also deletes our copy of your purchase records, but the purchase itself stays
+recorded with Google Play. Sign up again with the same Google account and tap “Restore purchases”
+to get your entitlements back. Deleting the account neither voids the purchase nor triggers a refund.</p>
+
+<hr style="margin:48px 0;border:none;border-top:1px solid var(--line)">
+
+<h2>日本語</h2>
+<p>「餘裕 · PICO LEDGER」（<code>com.fish.picoledger</code>）は<strong>アカウントなしでも全機能を利用できます</strong>。
+アカウントとサーバー上の暗号化帳簿は、お客様が「クラウド同期」を有効にした場合にのみ存在します。</p>
+
+<div class="card">
+<h3>方法 1：アプリ内で削除（推奨・即時）</h3>
+<ol>
+  <li>アプリを開き「設定」へ進みます。</li>
+  <li>「クラウド同期」欄で、削除したいアカウントにログインしていることを確認します。</li>
+  <li>「<strong>アカウント削除</strong>」をタップし、確認ダイアログで実行します。</li>
+</ol>
+<p>次のサーバー側データが<strong>即時かつ完全に</strong>削除されます（手動対応の待ち時間はありません）。</p>
+<ul>
+  <li>アカウント、メールアドレス、パスワードのハッシュ値</li>
+  <li>すべてのログインセッション</li>
+  <li><strong>暗号化された帳簿</strong>（リカバリーキー関連の暗号化項目を含む）</li>
+  <li>当方が保持する購入記録</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>方法 2：メールでの削除依頼</h3>
+<p>すでにアンインストール済み、ログインできない、またはアプリ内操作が難しい場合は、
+<strong>登録時のメールアドレス</strong>から
+<a href="mailto:fish@coss.com.tw?subject=PICO%20LEDGER%20account%20deletion%20request">fish@coss.com.tw</a>
+宛に、件名「PICO LEDGER account deletion request」でご連絡ください。
+<strong>受領後 7 営業日以内</strong>に削除し、返信でご報告します。なりすまし防止のため、
+当該アカウント本人のメールアドレスからのご依頼のみ受け付けます。</p>
+</div>
+
+<h3>端末内のデータについて</h3>
+<p>アカウントを削除しても、端末内の帳簿は自動的には消えません。併せて削除する場合は
+アンインストール、または Android の「設定 → アプリ → 餘裕 · PICO LEDGER → ストレージ → データを消去」を
+実行してください。</p>
+
+<h3>購入について</h3>
+<p>アカウント削除により当方の購入記録も削除されますが、購入自体は Google Play に記録されています。
+同じ Google アカウントで再登録し、アプリ内の「購入の復元」で権利を回復できます。
+アカウント削除によって購入が無効になったり、自動的に返金されたりすることはありません。</p>
+
+<footer>
+  餘裕 · PICO LEDGER — <code>com.fish.picoledger</code> ·
+  <a href="./">隱私權政策 / Privacy Policy</a> ·
+  <a href="mailto:fish@coss.com.tw">fish@coss.com.tw</a>
+</footer>
+
+</main>
+</body>
+</html>

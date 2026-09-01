@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>餘裕 · PICO LEDGER — 隱私權政策 / Privacy Policy / プライバシーポリシー</title>
+<style>
+  :root { color-scheme: light dark; --fg: #1c1e26; --dim: #5b6272; --bg: #f7f8fb;
+          --card: #fff; --line: #dfe3ec; --accent: #2563eb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg: #e3e6f0; --dim: #9aa1b5; --bg: #12141c; --card: #191c26;
+            --line: #2b2f3d; --accent: #89b4fa; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 0 20px 80px; background: var(--bg); color: var(--fg);
+         font: 16px/1.75 system-ui, -apple-system, "Noto Sans TC", "Noto Sans JP", sans-serif; }
+  main { max-width: 720px; margin: 0 auto; }
+  header { padding: 48px 0 24px; border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+  h1 { font-size: 26px; margin: 0 0 6px; letter-spacing: .01em; }
+  .sub { color: var(--dim); font-size: 14px; margin: 0; }
+  nav { position: sticky; top: 0; background: var(--bg); padding: 14px 0;
+        border-bottom: 1px solid var(--line); margin-bottom: 32px; z-index: 1; }
+  nav a { display: inline-block; margin-right: 16px; color: var(--accent);
+          text-decoration: none; font-size: 14px; font-weight: 600; }
+  nav a:hover { text-decoration: underline; }
+  section { padding-top: 24px; }
+  h2 { font-size: 21px; margin: 40px 0 4px; padding-top: 12px; }
+  h3 { font-size: 16px; margin: 28px 0 6px; }
+  p, li { color: var(--fg); }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+          padding: 4px 20px 18px; margin: 18px 0; }
+  .updated { color: var(--dim); font-size: 14px; }
+  a { color: var(--accent); }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line);
+           color: var(--dim); font-size: 13px; }
+  code { background: var(--card); border: 1px solid var(--line); border-radius: 4px;
+         padding: 1px 5px; font-size: 13px; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 14.5px; }
+  th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--card); font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>餘裕 · PICO LEDGER</h1>
+  <p class="sub">隱私權政策 · Privacy Policy · プライバシーポリシー</p>
+</header>
+
+<nav>
+  <a href="#zh">繁體中文</a>
+  <a href="#en">English</a>
+  <a href="#ja">日本語</a>
+</nav>
+
+<!-- ───────────────── 繁體中文 ───────────────── -->
+<section id="zh">
+<h2>隱私權政策（繁體中文）</h2>
+<p class="updated">最後更新：2026 年 9 月 1 日</p>
+
+<p>「餘裕 · PICO LEDGER」（套件名稱 <code>com.fish.picoledger</code>，以下稱「本 App」）
+是一款個人記帳與預算工具。本 App 的核心設計是：<strong>不開啟雲端同步時，你的帳本
+完全留在你自己的裝置上</strong>；開啟雲端同步後，帳本內容<strong>在離開裝置之前就已加密</strong>，
+我們的伺服器只存得到我們自己也無法解讀的密文。</p>
+
+<div class="card">
+<h3>一、一分鐘摘要</h3>
+<ul>
+  <li>不註冊帳號也能完整使用，這種情況下本 App <strong>不會把你的任何帳本資料傳出裝置</strong>。</li>
+  <li>註冊並開啟雲端同步後，我們只會收到：你的電子郵件、密碼的雜湊值，以及<strong>加密後的帳本密文</strong>。</li>
+  <li>我們（開發者）<strong>無法解讀</strong>你的交易明細、金額、備註、貸款或存錢目標——技術上做不到，因為解密金鑰從未離開你的裝置。</li>
+  <li>本 App 會顯示 Google AdMob 廣告；廣告 SDK 會依 Google 的政策處理裝置與廣告識別碼。購買「去廣告」後，本 App 連廣告 SDK 都不會再載入。</li>
+  <li>你可以隨時在 App 內「設定 → 刪除帳號」自行刪除帳號與伺服器上的加密帳本，不需要來信申請。</li>
+</ul>
+</div>
+
+<h3>二、不使用雲端同步時（預設狀態）</h3>
+<p>本 App 安裝後預設就是純本機模式：不需要註冊、不需要登入。你的交易紀錄、自訂分類、
+儲蓄目標、貸款、固定收支、語系與主題設定，全部只寫在<strong>你這台裝置的 App 儲存空間裡</strong>。
+本 App 不會把這些內容上傳到任何伺服器，我們也無從得知你是否安裝了它、記了幾筆帳。</p>
+<p>解除安裝本 App 會一併刪除這些本機資料。請注意：<strong>純本機模式下沒有任何雲端備份</strong>，
+換手機或清除 App 資料前請自行匯出或先啟用雲端同步。</p>
+
+<h3>三、雲端同步與端對端加密</h3>
+<p>啟用雲端同步後，你的帳本資料在離開你的裝置「之前」就已經加密——加密與解密都只發生在你的
+手機或瀏覽器上，我們的伺服器只儲存加密後、我們自己也無法解讀的密文。</p>
+<p><strong>技術上是怎麼做到的：</strong>你登入用的密碼，會在你的裝置上被用來產生一把只存在於裝置
+本機、從未被傳送出去的「加密金鑰」。伺服器收到的登入密碼，經過一層與這把加密金鑰完全無關的
+轉換——即使伺服器遭入侵，也無法從中還原出你的加密金鑰。你的交易紀錄、分類、備註、貸款、
+存錢目標等所有帳本內容，一律先在本機以 AES-256-GCM 加密才會上傳；我們資料庫裡看到的只是一段
+無法解讀的亂碼。在 Android 上，這把金鑰是存放在系統的硬體金鑰庫（Android Keystore）中。</p>
+
+<p><strong>這個保護的實際範圍（請容我們誠實說明限制）：</strong></p>
+<ul>
+  <li>我們（開發者）無法讀取你的交易明細、金額、備註或任何帳本內容——即使我們想看，技術上也做不到，因為我們從未擁有能解密的金鑰。</li>
+  <li>我們仍然能看到：你的帳號是否存在（電子郵件）、上次同步的時間、加密後資料的大約大小——但看不到內容本身。</li>
+  <li>這個保護的前提是你使用的是官方、未被竄改的 App；如果你的裝置本身已中毒或安裝了被竄改過的版本，任何端對端加密都無法保護你——這是所有端對端加密服務共同的限制，並非本 App 獨有。</li>
+  <li><strong>忘記密碼：</strong>因為我們沒有你的加密金鑰，我們也「無法」幫你重設密碼後救回資料。因此我們會在你啟用雲端同步時提供一組「復原金鑰」，請務必妥善保存；往後若忘記密碼，只有這組復原金鑰能救回你的資料。<strong>若密碼與復原金鑰都遺失，資料將無法復原。</strong></li>
+</ul>
+
+<h3>四、我們在伺服器上實際儲存的資料</h3>
+<p>只有在你註冊帳號之後才會有下列資料。伺服器位於我們自行維運的主機
+（網域 <code>picoledger.fish-zero.com</code>），流量經由 Cloudflare 傳輸。</p>
+<table>
+  <tr><th>資料</th><th>用途</th><th>我們讀得懂嗎</th></tr>
+  <tr><td>電子郵件地址</td><td>帳號識別、登入</td><td>是</td></tr>
+  <tr><td>密碼的雜湊值</td><td>驗證登入（不儲存原始密碼）</td><td>否（單向雜湊）</td></tr>
+  <tr><td>登入工作階段（session token）</td><td>維持登入狀態</td><td>是</td></tr>
+  <tr><td>帳本密文與其初始化向量（IV）</td><td>雲端同步</td><td><strong>否</strong></td></tr>
+  <tr><td>密文大小、版本號、更新時間</td><td>衝突偵測、容量顯示</td><td>是</td></tr>
+  <tr><td>以密碼包覆的加密金鑰（wrapped DEK）</td><td>讓你在新裝置輸入密碼後解開自己的帳本</td><td>否（沒有你的密碼就解不開）</td></tr>
+  <tr><td>復原金鑰的驗證雜湊、以復原金鑰包覆的加密金鑰</td><td>忘記密碼時的復原流程</td><td>否</td></tr>
+  <tr><td>購買紀錄：商品代號、平台、購買憑證（token）、驗證時間、是否有效</td><td>解鎖已購買的功能、恢復購買、退款處理</td><td>是</td></tr>
+</table>
+<p>此外，如同任何網路服務，伺服器與 Cloudflare 會在一般連線紀錄中處理你的 IP 位址、
+時間與請求路徑，用途僅限於維持服務運作與防止濫用。我們不會用這些紀錄建立使用者輪廓，
+也不會將其與你的帳本內容關聯（我們本來就讀不到帳本內容）。</p>
+<p><strong>我們不做的事：</strong>不販售個人資料、不與廣告商分享你的帳本或電子郵件、
+沒有安裝任何行為分析或追蹤 SDK（本 App 沒有 Firebase Analytics、沒有第三方統計工具）。</p>
+
+<h3>五、廣告（Google AdMob）</h3>
+<p>本 App 免費提供，並以 Google AdMob 廣告支撐開發成本。廣告出現在兩個位置：畫面上方的
+橫幅廣告，以及你按下「轉出 PDF」年度報告時的一次全螢幕插頁廣告。</p>
+<p>廣告由 Google 提供與投放。Google 及其合作夥伴可能會收集或使用裝置的廣告識別碼
+（Advertising ID）、裝置與 App 的基本資訊，以及由 IP 位址推斷的粗略位置，用於投放與衡量
+廣告成效。這些資料由 Google 依其自身政策處理，<strong>本 App 不會把你的帳本內容、電子郵件
+或任何帳號資訊提供給廣告服務</strong>。</p>
+<ul>
+  <li>Google 如何在合作夥伴網站與 App 使用資料：<a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></li>
+  <li>你可以在 Android 系統的「設定 → Google → 廣告」中重設或刪除廣告 ID、關閉廣告個人化。</li>
+  <li>在適用歐盟／英國法規的地區，首次顯示廣告前會出現 Google 的使用者同意訊息（UMP），你可以在其中選擇是否同意個人化廣告。</li>
+</ul>
+<p><strong>購買「去廣告」或「終身解鎖」之後，本 App 不會再初始化廣告 SDK</strong>——不是把廣告藏起來，
+而是根本不載入。</p>
+
+<h3>六、購買與付款</h3>
+<p>本 App 提供兩項一次性購買（非訂閱）：「去廣告」與「終身解鎖」（去廣告＋雲端同步）。
+付款完全由 <strong>Google Play 帳單服務</strong>處理，<strong>本 App 與我們的伺服器都不會接觸到你的
+信用卡號、帳單地址或任何付款工具資料</strong>。</p>
+<p>為了確認一筆購買是真的且屬於你，我們會將 Google Play 發出的購買憑證（purchase token）
+送到我們的伺服器，由伺服器向 Google 驗證，並記錄第四節表格中列出的購買紀錄。送給 Google 的
+帳號識別碼是<strong>經過雜湊處理</strong>的，不是你的電子郵件本身。你可以隨時在 App 內使用
+「恢復購買」，於同一個 Google 帳號的其他裝置上取回已購買的權益。</p>
+
+<h3>七、其他第三方服務</h3>
+<ul>
+  <li><strong>Google Play 服務／Google Play 帳單</strong>：購買與購買驗證（見第六節）。</li>
+  <li><strong>Google Play 應用程式內評論 API</strong>：當你已記帳滿一定筆數且本裝置尚未詢問過時，本 App 會呼叫 Google 官方的評分視窗。整個流程由 Google 處理，<strong>本 App 不會得知你是否評分、評了幾顆星</strong>。</li>
+  <li><strong>Cloudflare</strong>：作為我們伺服器對外的連線通道與防護層。</li>
+  <li><strong>Google Fonts</strong>：轉出 PDF 年度報告時，報告版面會嘗試載入網路字型以取得最佳排版；載入失敗（例如離線）時會自動改用系統字型，不影響轉出。</li>
+  <li><strong>系統列印服務</strong>：「轉出 PDF」是交給 Android 內建的列印／儲存為 PDF 功能完成的，檔案存放位置由你在系統對話框中自行選擇。本 App 不會讀取、上傳或保留你存出的 PDF。</li>
+</ul>
+
+<h3>八、權限</h3>
+<p>本 App 只宣告一項權限：<strong>網際網路存取（INTERNET）</strong>，用於雲端同步、廣告與購買驗證。
+本 App <strong>不要求</strong>存取你的相機、麥克風、通訊錄、簡訊、通話紀錄、精確位置或相簿，
+也不要求儲存空間權限（轉出 PDF 由系統列印服務處理）。</p>
+
+<h3>九、兒童</h3>
+<p>本 App 並非以 13 歲以下兒童為對象設計，我們也不會刻意向兒童收集個人資料。
+若你認為有兒童在未經監護人同意下向我們提供了資料，請來信告知，我們會儘速刪除。</p>
+
+<h3>十、資料保留與刪除</h3>
+<ul>
+  <li><strong>刪除帳號：</strong>App 內「設定 → 刪除帳號」即可自行刪除。這會一併刪除伺服器上的帳號、登入工作階段、<strong>加密帳本副本</strong>與購買紀錄，且無法復原。不需要來信申請、不需要等待人工處理。</li>
+  <li><strong>本機資料：</strong>刪除帳號不會自動清空你這台裝置上的帳本；如需一併清除，請解除安裝本 App 或清除 App 資料。</li>
+  <li><strong>保留期間：</strong>上述伺服器端資料在你刪除帳號之前會持續保存，因為那正是雲端同步的用途。</li>
+  <li><strong>購買紀錄：</strong>刪除帳號後我們這邊的購買紀錄也會刪除；但你的購買仍記錄在 Google Play，日後可用同一個 Google 帳號透過「恢復購買」取回。</li>
+</ul>
+
+<h3>十一、政策變更與聯絡方式</h3>
+<p>本政策若有修訂，會更新本頁最上方的日期並在此公告。</p>
+<p>對本政策、你的資料，或想行使查詢／更正／刪除等權利，請來信：
+<a href="mailto:fish@coss.com.tw">fish@coss.com.tw</a></p>
+</section>
+
+<!-- ───────────────── English ───────────────── -->
+<section id="en" lang="en">
+<h2>Privacy Policy (English)</h2>
+<p class="updated">Last updated: 1 September 2026</p>
+
+<p>“餘裕 · PICO LEDGER” (package name <code>com.fish.picoledger</code>, the “App”) is a personal
+budgeting and expense-tracking tool. Its core design: <strong>with cloud sync off, your ledger never
+leaves your device</strong>; with cloud sync on, your ledger is <strong>encrypted before it leaves the
+device</strong>, and our server only ever stores ciphertext that we ourselves cannot read.</p>
+
+<div class="card">
+<h3>1. One-minute summary</h3>
+<ul>
+  <li>The App is fully usable without an account. In that mode <strong>none of your ledger data leaves the device</strong>.</li>
+  <li>If you sign up and enable cloud sync, we receive only your email address, a hash of your password, and <strong>encrypted ledger ciphertext</strong>.</li>
+  <li>We (the developer) <strong>cannot read</strong> your transactions, amounts, notes, loans, or savings goals. Not “we promise not to” — we technically cannot, because the decryption key never leaves your device.</li>
+  <li>The App shows Google AdMob ads. If you buy “remove ads”, the App stops loading the ad SDK entirely.</li>
+  <li>You can delete your account and its encrypted ledger yourself, in-app, under <em>Settings → Delete account</em>. No email request needed.</li>
+</ul>
+</div>
+
+<h3>2. When cloud sync is off (the default)</h3>
+<p>After installation the App is local-only: no sign-up, no sign-in. Your transactions, custom
+categories, savings goals, loans, recurring items, language and theme settings are written
+<strong>only to this device’s app storage</strong>. Nothing is uploaded, and we have no way of knowing that
+you installed the App or how many entries you keep.</p>
+<p>Uninstalling the App deletes this local data. Note that <strong>local-only mode has no cloud backup</strong> —
+export your data or enable cloud sync before switching phones or clearing app data.</p>
+
+<h3>3. Cloud sync and end-to-end encryption</h3>
+<p>When cloud sync is enabled, your ledger is encrypted <em>before</em> it leaves your device.
+Encryption and decryption happen only on your phone or in your browser; our server stores only
+ciphertext that we cannot read.</p>
+<p><strong>How this works technically:</strong> your sign-in password is used, on your device, to derive an
+encryption key that exists only locally and is never transmitted. The password value that reaches
+the server goes through a separate transformation that is unrelated to that encryption key — even
+if the server were breached, the encryption key could not be recovered from it. All ledger content
+is encrypted locally with AES-256-GCM before upload; our database holds an opaque blob. On Android
+the key is held in the system’s hardware-backed keystore (Android Keystore).</p>
+
+<p><strong>The honest limits of this protection:</strong></p>
+<ul>
+  <li>We cannot read your transactions, amounts, notes, or any ledger content — we never hold a key that could decrypt it.</li>
+  <li>We can still see: that your account exists (your email address), when you last synced, and the approximate size of the encrypted blob — but not its contents.</li>
+  <li>This protection assumes you are running the official, unmodified App. If your device is compromised or you installed a tampered build, no end-to-end encryption can protect you. That limitation is common to every end-to-end encrypted service.</li>
+  <li><strong>Forgotten passwords:</strong> because we do not hold your key, we <em>cannot</em> reset your password and recover your data. When you enable cloud sync we give you a <strong>recovery key</strong> — keep it safe. It is the only way back in if you forget your password. <strong>If both the password and the recovery key are lost, the data cannot be recovered.</strong></li>
+</ul>
+
+<h3>4. What we actually store on the server</h3>
+<p>None of this exists until you create an account. The server is self-hosted by us
+(domain <code>picoledger.fish-zero.com</code>) and traffic is carried through Cloudflare.</p>
+<table>
+  <tr><th>Data</th><th>Purpose</th><th>Readable by us?</th></tr>
+  <tr><td>Email address</td><td>Account identity, sign-in</td><td>Yes</td></tr>
+  <tr><td>Password hash</td><td>Sign-in verification (the password itself is not stored)</td><td>No (one-way hash)</td></tr>
+  <tr><td>Session token</td><td>Keeping you signed in</td><td>Yes</td></tr>
+  <tr><td>Ledger ciphertext and its IV</td><td>Cloud sync</td><td><strong>No</strong></td></tr>
+  <tr><td>Ciphertext size, version number, updated-at time</td><td>Conflict detection, storage display</td><td>Yes</td></tr>
+  <tr><td>Password-wrapped encryption key</td><td>Lets you unlock your own ledger on a new device</td><td>No (useless without your password)</td></tr>
+  <tr><td>Recovery-key verifier hash and recovery-key-wrapped encryption key</td><td>The forgotten-password recovery flow</td><td>No</td></tr>
+  <tr><td>Purchase records: product id, platform, purchase token, verification time, validity</td><td>Unlocking what you bought, restoring purchases, refunds</td><td>Yes</td></tr>
+</table>
+<p>As with any online service, the server and Cloudflare process your IP address, timestamps and
+request paths in ordinary connection logs, solely to operate the service and prevent abuse. We do
+not build user profiles from those logs, and they are not linked to ledger content (which we cannot
+read in the first place).</p>
+<p><strong>What we do not do:</strong> we do not sell personal data, do not share your ledger or email with
+advertisers, and ship no behavioural analytics or tracking SDK (no Firebase Analytics, no
+third-party statistics library).</p>
+
+<h3>5. Advertising (Google AdMob)</h3>
+<p>The App is free and supported by Google AdMob ads in two places: a banner at the top of the
+screen, and a single full-screen interstitial when you export the annual PDF report.</p>
+<p>Ads are served by Google. Google and its partners may collect or use the device advertising ID,
+basic device and app information, and coarse location inferred from your IP address, to serve and
+measure ads. That data is handled by Google under its own policies. <strong>The App never passes your
+ledger content, email address, or any account information to the ad service.</strong></p>
+<ul>
+  <li>How Google uses data from sites and apps that use its services: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></li>
+  <li>You can reset or delete your advertising ID and turn off ad personalisation under <em>Settings → Google → Ads</em> on Android.</li>
+  <li>Where EU/UK rules apply, Google’s consent message (UMP) is shown before ads appear, and you choose there whether to allow personalised ads.</li>
+</ul>
+<p><strong>After buying “remove ads” or the lifetime unlock, the App no longer initialises the ad SDK</strong> —
+the ads are not merely hidden; the SDK is never loaded.</p>
+
+<h3>6. Purchases and payment</h3>
+<p>The App offers two one-time purchases (not subscriptions): “remove ads” and “lifetime unlock”
+(remove ads plus cloud sync). Payment is handled entirely by <strong>Google Play Billing</strong>.
+<strong>Neither the App nor our server ever sees your card number, billing address, or any payment
+instrument data.</strong></p>
+<p>To confirm a purchase is genuine and yours, the purchase token issued by Google Play is sent to
+our server, verified against Google, and recorded as described in section 4. The account identifier
+we hand to Google is a <strong>hashed</strong> value, not your email address. You can use “Restore purchases”
+in the App at any time to recover entitlements on another device signed in to the same Google
+account.</p>
+
+<h3>7. Other third-party services</h3>
+<ul>
+  <li><strong>Google Play services / Google Play Billing</strong> — purchases and purchase verification (section 6).</li>
+  <li><strong>Google Play In-App Review API</strong> — once you have recorded a certain number of entries and this device has not been asked before, the App calls Google’s official rating dialog. Google handles the whole flow; <strong>the App is not told whether you rated it or what score you gave</strong>.</li>
+  <li><strong>Cloudflare</strong> — the network path and protection layer in front of our server.</li>
+  <li><strong>Google Fonts</strong> — the annual PDF report tries to load web fonts for best typography; if that fails (for example offline) it falls back to system fonts and the export still works.</li>
+  <li><strong>System print service</strong> — “Export PDF” is handed to Android’s built-in print / save-as-PDF function, and you choose where the file is saved. The App does not read, upload, or retain the PDF you saved.</li>
+</ul>
+
+<h3>8. Permissions</h3>
+<p>The App declares exactly one permission: <strong>INTERNET</strong>, used for cloud sync, ads, and purchase
+verification. It does <strong>not</strong> request access to your camera, microphone, contacts, SMS, call logs,
+precise location, or photo library, and it does not request storage permission (PDF export is
+handled by the system print service).</p>
+
+<h3>9. Children</h3>
+<p>The App is not directed at children under 13, and we do not knowingly collect personal data from
+children. If you believe a child has provided us with data without a guardian’s consent, please
+contact us and we will delete it promptly.</p>
+
+<h3>10. Retention and deletion</h3>
+<ul>
+  <li><strong>Deleting your account:</strong> use <em>Settings → Delete account</em> in the App. This deletes the account, sessions, <strong>encrypted ledger copy</strong> and purchase records from our server, irreversibly. No email request, no manual processing, no waiting.</li>
+  <li><strong>Local data:</strong> deleting the account does not automatically wipe the ledger on this device. Uninstall the App or clear its app data if you want that too.</li>
+  <li><strong>Retention period:</strong> the server-side data above is kept until you delete your account — that is exactly what cloud sync is for.</li>
+  <li><strong>Purchase records:</strong> deleting your account also deletes our copy of your purchase records. Your purchase itself remains recorded with Google Play and can be recovered later with “Restore purchases” on the same Google account.</li>
+</ul>
+
+<h3>11. Changes and contact</h3>
+<p>If this policy changes, the date at the top of this page is updated and the change announced here.</p>
+<p>Questions about this policy or your data, or to exercise access / correction / deletion rights:
+<a href="mailto:fish@coss.com.tw">fish@coss.com.tw</a></p>
+</section>
+
+<!-- ───────────────── 日本語 ───────────────── -->
+<section id="ja" lang="ja">
+<h2>プライバシーポリシー（日本語）</h2>
+<p class="updated">最終更新日：2026 年 9 月 1 日</p>
+
+<p>「餘裕 · PICO LEDGER」（パッケージ名 <code>com.fish.picoledger</code>、以下「本アプリ」）は、
+個人向けの家計簿・予算管理ツールです。設計の中心は次の二点です。<strong>クラウド同期を使わない場合、
+帳簿データは端末の外に出ません</strong>。クラウド同期を使う場合も、帳簿の内容は<strong>端末を離れる前に
+暗号化</strong>され、当方のサーバーには開発者自身にも解読できない暗号文しか保存されません。</p>
+
+<div class="card">
+<h3>1. 要約</h3>
+<ul>
+  <li>アカウント登録なしで全機能を利用できます。その場合、<strong>帳簿データが端末外に送信されることはありません</strong>。</li>
+  <li>登録してクラウド同期を有効にした場合、当方が受け取るのはメールアドレス、パスワードのハッシュ値、そして<strong>暗号化された帳簿データ</strong>のみです。</li>
+  <li>開発者は取引明細・金額・メモ・ローン・貯蓄目標を<strong>解読できません</strong>。「しない」ではなく、復号鍵が端末から出ないため技術的にできません。</li>
+  <li>本アプリは Google AdMob の広告を表示します。「広告非表示」を購入すると、広告 SDK 自体を読み込まなくなります。</li>
+  <li>アカウントとサーバー上の暗号化帳簿は、アプリ内の「設定 → アカウント削除」からご自身で削除できます。メールでの申請は不要です。</li>
+</ul>
+</div>
+
+<h3>2. クラウド同期を使わない場合（既定）</h3>
+<p>インストール直後はローカル専用モードで、登録もログインも不要です。取引記録、カスタム分類、
+貯蓄目標、ローン、定期収支、言語・テーマ設定は<strong>この端末のアプリ領域にのみ</strong>保存されます。
+アップロードは行われず、当方は利用の有無や記録件数を知ることができません。</p>
+<p>アンインストールするとこれらのローカルデータも削除されます。<strong>ローカル専用モードにはクラウド
+バックアップがありません</strong>ので、機種変更やアプリデータ消去の前にエクスポートするか、クラウド同期を
+有効にしてください。</p>
+
+<h3>3. クラウド同期とエンドツーエンド暗号化</h3>
+<p>クラウド同期を有効にすると、帳簿データは端末を離れる「前」に暗号化されます。暗号化と復号は
+お使いのスマートフォンまたはブラウザー上でのみ行われ、サーバーには解読できない暗号文だけが
+保存されます。</p>
+<p><strong>技術的な仕組み：</strong>ログイン用パスワードは端末上で「暗号鍵」の生成に使われ、この鍵は端末内に
+のみ存在し、送信されることはありません。サーバーに届くパスワードは、この暗号鍵とはまったく無関係な
+変換を経ています。仮にサーバーが侵害されても、そこから暗号鍵を復元することはできません。取引記録、
+分類、メモ、ローン、貯蓄目標などの帳簿内容はすべて、端末上で AES-256-GCM により暗号化されてから
+アップロードされます。Android ではこの鍵はハードウェア保護されたキーストア（Android Keystore）に
+保管されます。</p>
+
+<p><strong>この保護の範囲（限界も正直に記します）：</strong></p>
+<ul>
+  <li>開発者は取引明細・金額・メモなど帳簿の内容を読み取れません。復号できる鍵を保有していないためです。</li>
+  <li>当方が把握できるのは、アカウントの存在（メールアドレス）、最終同期日時、暗号化データのおおよそのサイズまでで、内容は分かりません。</li>
+  <li>この保護は、公式かつ改変されていないアプリを利用していることが前提です。端末自体が侵害されている場合、いかなるエンドツーエンド暗号化も保護できません。これはすべての同種サービスに共通する限界です。</li>
+  <li><strong>パスワードを忘れた場合：</strong>当方は鍵を保有していないため、パスワードを再設定してデータを復旧させることは「できません」。そのためクラウド同期の有効化時に「リカバリーキー」をお渡しします。大切に保管してください。<strong>パスワードとリカバリーキーの両方を失うと、データは復旧できません。</strong></li>
+</ul>
+
+<h3>4. サーバーに実際に保存される情報</h3>
+<p>以下はアカウント作成後にのみ存在します。サーバーは当方が自身で運用しており
+（ドメイン <code>picoledger.fish-zero.com</code>）、通信は Cloudflare を経由します。</p>
+<table>
+  <tr><th>データ</th><th>目的</th><th>開発者が読めるか</th></tr>
+  <tr><td>メールアドレス</td><td>アカウント識別・ログイン</td><td>はい</td></tr>
+  <tr><td>パスワードのハッシュ値</td><td>ログイン検証（パスワード自体は保存しません）</td><td>いいえ（一方向ハッシュ）</td></tr>
+  <tr><td>セッショントークン</td><td>ログイン状態の維持</td><td>はい</td></tr>
+  <tr><td>帳簿の暗号文と初期化ベクトル（IV）</td><td>クラウド同期</td><td><strong>いいえ</strong></td></tr>
+  <tr><td>暗号文のサイズ、バージョン番号、更新日時</td><td>競合検出、容量表示</td><td>はい</td></tr>
+  <tr><td>パスワードで包んだ暗号鍵</td><td>新しい端末で自分の帳簿を復号するため</td><td>いいえ（パスワードなしでは開けません）</td></tr>
+  <tr><td>リカバリーキーの検証ハッシュ、リカバリーキーで包んだ暗号鍵</td><td>パスワード忘れ時の復旧</td><td>いいえ</td></tr>
+  <tr><td>購入記録：商品 ID、プラットフォーム、購入トークン、検証日時、有効性</td><td>購入済み機能の解除、購入の復元、返金処理</td><td>はい</td></tr>
+</table>
+<p>また、一般的なオンラインサービスと同様に、サーバーおよび Cloudflare は接続ログとして IP アドレス、
+日時、リクエストパスを処理します。用途はサービスの運用と不正利用防止に限られます。これらのログから
+利用者プロファイルを作成することはなく、帳簿の内容と関連付けることもありません（そもそも内容を
+読めません）。</p>
+<p><strong>行わないこと：</strong>個人データの販売、帳簿やメールアドレスの広告事業者への提供、行動分析・
+トラッキング SDK の搭載（Firebase Analytics も第三者統計ツールも使用していません）。</p>
+
+<h3>5. 広告（Google AdMob）</h3>
+<p>本アプリは無料で提供され、Google AdMob の広告により開発費を賄っています。広告は画面上部の
+バナーと、年間レポートを「PDF に出力」する際の全画面インタースティシャル広告の 2 か所です。</p>
+<p>広告は Google により配信されます。Google およびそのパートナーは、広告 ID、端末とアプリの基本情報、
+IP アドレスから推定されるおおよその位置情報を、広告の配信・効果測定のために収集・利用する場合が
+あります。これらは Google のポリシーに基づいて処理されます。<strong>本アプリが帳簿の内容、メールアドレス、
+アカウント情報を広告サービスに渡すことはありません。</strong></p>
+<ul>
+  <li>Google がパートナーのサイト・アプリで情報を使用する方法：<a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></li>
+  <li>Android の「設定 → Google → 広告」で広告 ID のリセット・削除、広告のパーソナライズ無効化が可能です。</li>
+  <li>EU／英国の規制が適用される地域では、広告表示前に Google の同意メッセージ（UMP）が表示されます。</li>
+</ul>
+<p><strong>「広告非表示」または「ライフタイム解除」を購入すると、本アプリは広告 SDK を初期化しなくなります。</strong>
+広告を隠すのではなく、SDK 自体を読み込みません。</p>
+
+<h3>6. 購入と支払い</h3>
+<p>本アプリには買い切りの購入が 2 種類あります（サブスクリプションではありません）。「広告非表示」と
+「ライフタイム解除」（広告非表示＋クラウド同期）です。決済は<strong>すべて Google Play の課金システム</strong>が
+処理し、<strong>本アプリおよび当方のサーバーがカード番号・請求先住所などの決済情報に触れることは
+ありません</strong>。</p>
+<p>購入が正当かつご本人のものであることを確認するため、Google Play が発行する購入トークンを当方の
+サーバーへ送信し、Google に対して検証したうえで第 4 節の購入記録として保存します。Google に渡す
+アカウント識別子は<strong>ハッシュ化された値</strong>であり、メールアドレスそのものではありません。同じ Google
+アカウントの別端末では、アプリ内の「購入の復元」でいつでも権利を回復できます。</p>
+
+<h3>7. その他の第三者サービス</h3>
+<ul>
+  <li><strong>Google Play サービス／Google Play 課金</strong>：購入と購入検証（第 6 節）。</li>
+  <li><strong>Google Play アプリ内レビュー API</strong>：一定の記録件数に達し、かつこの端末で未表示の場合に、Google 公式の評価ダイアログを呼び出します。処理は Google 側で完結し、<strong>評価したかどうか、何点かを本アプリが知ることはありません</strong>。</li>
+  <li><strong>Cloudflare</strong>：サーバー前段の通信経路・保護レイヤー。</li>
+  <li><strong>Google Fonts</strong>：PDF 年間レポートの出力時に最適な組版のため Web フォントの読み込みを試みます。オフラインなどで失敗した場合はシステムフォントに切り替わり、出力は問題なく行えます。</li>
+  <li><strong>システム印刷サービス</strong>：「PDF に出力」は Android 標準の印刷／PDF 保存機能に引き渡され、保存先はお客様が選択します。本アプリが保存された PDF を読み取る・アップロード・保持することはありません。</li>
+</ul>
+
+<h3>8. 権限</h3>
+<p>本アプリが宣言する権限は<strong>インターネット接続（INTERNET）</strong>のみで、クラウド同期・広告・購入検証に
+使用します。カメラ、マイク、連絡先、SMS、通話履歴、正確な位置情報、写真ライブラリへのアクセスは
+<strong>要求しません</strong>。ストレージ権限も要求しません（PDF 出力はシステムの印刷サービスが担当します）。</p>
+
+<h3>9. お子様について</h3>
+<p>本アプリは 13 歳未満のお子様を対象としておらず、お子様の個人情報を意図的に収集することはありません。
+保護者の同意なくお子様が情報を提供したと思われる場合は、ご連絡いただければ速やかに削除します。</p>
+
+<h3>10. 保存期間と削除</h3>
+<ul>
+  <li><strong>アカウント削除：</strong>アプリ内の「設定 → アカウント削除」から実行できます。サーバー上のアカウント、セッション、<strong>暗号化された帳簿</strong>、購入記録が削除され、復元はできません。メール申請も手動対応の待ち時間も不要です。</li>
+  <li><strong>ローカルデータ：</strong>アカウントを削除しても、この端末内の帳簿は自動的には消えません。併せて消す場合はアンインストールまたはアプリデータの消去を行ってください。</li>
+  <li><strong>保存期間：</strong>上記のサーバー側データは、アカウントを削除するまで保存されます（それがクラウド同期の目的です）。</li>
+  <li><strong>購入記録：</strong>アカウント削除により当方の購入記録も削除されますが、購入自体は Google Play に記録されており、同じ Google アカウントで「購入の復元」により回復できます。</li>
+</ul>
+
+<h3>11. 本ポリシーの変更とお問い合わせ</h3>
+<p>本ポリシーを改訂した場合は、このページ冒頭の日付を更新し、ここでお知らせします。</p>
+<p>本ポリシーやお客様のデータに関するお問い合わせ、開示・訂正・削除のご請求は次のアドレスまで：
+<a href="mailto:fish@coss.com.tw">fish@coss.com.tw</a></p>
+</section>
+
+<footer>
+  餘裕 · PICO LEDGER — <code>com.fish.picoledger</code> · 開發者：Fish ·
+  <a href="mailto:fish@coss.com.tw">fish@coss.com.tw</a>
+</footer>
+
+</main>
+</body>
+</html>
