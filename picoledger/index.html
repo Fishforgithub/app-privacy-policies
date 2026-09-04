@@ -59,7 +59,7 @@
 <!-- ───────────────── 繁體中文 ───────────────── -->
 <section id="zh">
 <h2>隱私權政策（繁體中文）</h2>
-<p class="updated">最後更新：2026 年 9 月 1 日</p>
+<p class="updated">最後更新：2026 年 9 月 4 日</p>
 
 <p>「餘裕 · PICO LEDGER」（套件名稱 <code>com.fish.picoledger</code>，以下稱「本 App」）
 是一款個人記帳與預算工具。本 App 的核心設計是：<strong>不開啟雲端同步時，你的帳本
@@ -73,6 +73,7 @@
   <li>註冊並開啟雲端同步後，我們只會收到：你的電子郵件、密碼的雜湊值，以及<strong>加密後的帳本密文</strong>。</li>
   <li>我們（開發者）<strong>無法解讀</strong>你的交易明細、金額、備註、貸款或存錢目標——技術上做不到，因為解密金鑰從未離開你的裝置。</li>
   <li>本 App 會顯示 Google AdMob 廣告；廣告 SDK 會依 Google 的政策處理裝置與廣告識別碼。購買「去廣告」後，本 App 連廣告 SDK 都不會再載入。</li>
+  <li><strong>語音記帳是選用功能</strong>：使用時，錄音與逐字稿會以明文送到我們的伺服器並轉送 Groq 進行辨識，<strong>這一段無法端對端加密</strong>。我們不保存錄音、逐字稿或對話內容，且一定要你按確認才會寫進帳本——詳見第七節。</li>
   <li>你可以隨時在 App 內「設定 → 刪除帳號」自行刪除帳號與伺服器上的加密帳本，不需要來信申請。</li>
 </ul>
 </div>
@@ -146,7 +147,20 @@
 帳號識別碼是<strong>經過雜湊處理</strong>的，不是你的電子郵件本身。你可以隨時在 App 內使用
 「恢復購買」，於同一個 Google 帳號的其他裝置上取回已購買的權益。</p>
 
-<h3>七、其他第三方服務</h3>
+<h3>七、語音記帳（選用功能）</h3>
+<p><strong>這是本 App 唯一無法端對端加密的功能，請讀完這一節再決定要不要使用。</strong>
+語音記帳需要你主動點擊麥克風按鈕才會啟動，第一次使用前會再次向你說明並徵求同意。
+你不使用它，本節就完全不適用於你，本 App 也不會錄下任何聲音。</p>
+<ul>
+  <li><strong>會送出什麼：</strong>你按下錄音到再次按下停止之間的<strong>錄音內容</strong>，以及辨識出來的<strong>逐字稿</strong>。兩者都是<strong>明文</strong>送出的——聲音要被辨識、文字要被理解，技術上就不可能同時維持端對端加密。這與第三節所述的帳本同步是兩回事：你的帳本本身仍然只以密文離開裝置。</li>
+  <li><strong>送到哪裡：</strong>先送到我們的伺服器，再由我們的伺服器轉送給 <strong>Groq, Inc.</strong>（美國公司）進行語音辨識與內容解析。除此之外不會送給任何其他第三方。</li>
+  <li><strong>我們保存什麼：不保存錄音，也不保存逐字稿或對話內容。</strong>音訊只在轉送的當下存在於記憶體中。我們唯一寫進資料庫的是「你今天用了幾次」這個數字，用途是計算每日免費額度。</li>
+  <li><strong>對話留在哪裡：</strong>整段語音對話只存在你這台裝置的記憶體裡，關掉語音視窗就消失。它不會被同步、不會被上傳，也不會寫進帳本以外的任何地方。</li>
+  <li><strong>寫進帳本前一定要你確認：</strong>AI 只會提出一份建議清單，金額、類別、日期、備註都可以當場修改，你按下確認之後才會真的記進帳本。</li>
+  <li><strong>後續處理：</strong>資料送抵 Groq 之後的處理適用 Groq 自己的隱私權政策（<a href="https://groq.com/privacy-policy/">groq.com/privacy-policy</a>）。</li>
+</ul>
+
+<h3>八、其他第三方服務</h3>
 <ul>
   <li><strong>Google Play 服務／Google Play 帳單</strong>：購買與購買驗證（見第六節）。</li>
   <li><strong>應用程式內評論 API</strong>：當你已記帳滿一定筆數且本裝置尚未詢問過時，本 App 會呼叫平台官方的評分視窗（Android 為 Google Play 應用程式內評論 API，iOS 為 Apple 的 <code>SKStoreReviewController</code>）。整個流程由平台處理，<strong>本 App 不會得知你是否評分、評了幾顆星</strong>。</li>
@@ -155,17 +169,21 @@
   <li><strong>系統列印服務</strong>：「轉出 PDF」是交給作業系統內建的列印／儲存為 PDF 功能完成的（Android 與 iOS 皆同），檔案存放位置由你在系統對話框中自行選擇。本 App 不會讀取、上傳或保留你存出的 PDF。</li>
 </ul>
 
-<h3>八、權限</h3>
-<p>在 Android 上，本 App 只宣告一項權限：<strong>網際網路存取（INTERNET）</strong>，用於雲端同步、
-廣告與購買驗證。iOS 沒有對應的「網路權限宣告」機制，App 本來就能連網；廣告個人化牽涉的追蹤授權
-請求已列在上一節。<strong>兩個平台上</strong>，本 App 都<strong>不要求</strong>存取你的相機、麥克風、通訊錄、
-簡訊、通話紀錄、精確位置或相簿，也不要求額外的儲存空間權限（轉出 PDF 由系統列印服務處理）。</p>
+<h3>九、權限</h3>
+<p>在 Android 上，本 App 宣告兩類權限：<strong>網際網路存取（INTERNET）</strong>，用於雲端同步、
+廣告與購買驗證；以及<strong>錄音（RECORD_AUDIO）與音訊設定（MODIFY_AUDIO_SETTINGS）</strong>，
+<strong>僅供第七節的語音記帳使用</strong>。錄音權限採「用到才問」：只有在你第一次點擊麥克風按鈕時，
+系統才會跳出授權詢問；你拒絕或從不使用語音記帳，本 App 就永遠不會錄音。iOS 沒有對應的
+「網路權限宣告」機制，App 本來就能連網，麥克風同樣是第一次使用語音記帳時才由系統詢問；
+廣告個人化牽涉的追蹤授權請求已列在上一節。<strong>兩個平台上</strong>，本 App 都<strong>不要求</strong>
+存取你的相機、通訊錄、簡訊、通話紀錄、精確位置或相簿，也不要求額外的儲存空間權限
+（轉出 PDF 由系統列印服務處理）。</p>
 
-<h3>九、兒童</h3>
+<h3>十、兒童</h3>
 <p>本 App 並非以 13 歲以下兒童為對象設計，我們也不會刻意向兒童收集個人資料。
 若你認為有兒童在未經監護人同意下向我們提供了資料，請來信告知，我們會儘速刪除。</p>
 
-<h3>十、資料保留與刪除</h3>
+<h3>十一、資料保留與刪除</h3>
 <ul>
   <li><strong>刪除帳號：</strong>App 內「設定 → 刪除帳號」即可自行刪除。這會一併刪除伺服器上的帳號、登入工作階段、<strong>加密帳本副本</strong>與購買紀錄，且無法復原。不需要來信申請、不需要等待人工處理。</li>
   <li><strong>本機資料：</strong>刪除帳號不會自動清空你這台裝置上的帳本；如需一併清除，請解除安裝本 App 或清除 App 資料。</li>
@@ -173,7 +191,7 @@
   <li><strong>購買紀錄：</strong>刪除帳號後我們這邊的購買紀錄也會刪除；但你的購買仍記錄在 Google Play，日後可用同一個 Google 帳號透過「恢復購買」取回。</li>
 </ul>
 
-<h3>十一、政策變更與聯絡方式</h3>
+<h3>十二、政策變更與聯絡方式</h3>
 <p>本政策若有修訂，會更新本頁最上方的日期並在此公告。</p>
 <p>對本政策、你的資料，或想行使查詢／更正／刪除等權利，請來信：
 <a href="mailto:fish@coss.com.tw">fish@coss.com.tw</a></p>
@@ -182,7 +200,7 @@
 <!-- ───────────────── English ───────────────── -->
 <section id="en" lang="en">
 <h2>Privacy Policy (English)</h2>
-<p class="updated">Last updated: 1 September 2026</p>
+<p class="updated">Last updated: 4 September 2026</p>
 
 <p>“餘裕 · PICO LEDGER” (package name <code>com.fish.picoledger</code>, the “App”) is a personal
 budgeting and expense-tracking tool. Its core design: <strong>with cloud sync off, your ledger never
@@ -196,6 +214,7 @@ device</strong>, and our server only ever stores ciphertext that we ourselves ca
   <li>If you sign up and enable cloud sync, we receive only your email address, a hash of your password, and <strong>encrypted ledger ciphertext</strong>.</li>
   <li>We (the developer) <strong>cannot read</strong> your transactions, amounts, notes, loans, or savings goals. Not “we promise not to” — we technically cannot, because the decryption key never leaves your device.</li>
   <li>The App shows Google AdMob ads. If you buy “remove ads”, the App stops loading the ad SDK entirely.</li>
+  <li><strong>Voice entry is optional.</strong> When you use it, the recording and its transcript are sent unencrypted to our server and forwarded to Groq for recognition — <strong>that part cannot be end-to-end encrypted</strong>. We keep no audio, transcript, or conversation, and nothing is written to your ledger until you confirm it. See section 7.</li>
   <li>You can delete your account and its encrypted ledger yourself, in-app, under <em>Settings → Delete account</em>. No email request needed.</li>
 </ul>
 </div>
@@ -276,7 +295,21 @@ we hand to Google is a <strong>hashed</strong> value, not your email address. Yo
 in the App at any time to recover entitlements on another device signed in to the same Google
 account.</p>
 
-<h3>7. Other third-party services</h3>
+<h3>7. Voice entry (optional feature)</h3>
+<p><strong>This is the one feature in the App that cannot be end-to-end encrypted. Please read this
+section before using it.</strong> Voice entry only starts when you tap the microphone button, and the
+App explains this and asks for your consent before the first recording. If you never use it, this
+section does not apply to you and the App records no audio at all.</p>
+<ul>
+  <li><strong>What is sent:</strong> the <strong>audio</strong> between the moment you start and stop recording, and the <strong>transcript</strong> produced from it. Both are sent <strong>unencrypted</strong> — speech has to be recognised and text has to be understood, which is technically incompatible with end-to-end encryption. This is separate from ledger sync in section 3: your ledger itself still leaves the device only as ciphertext.</li>
+  <li><strong>Where it goes:</strong> first to our server, which forwards it to <strong>Groq, Inc.</strong> (a US company) for speech recognition and parsing. It is not sent to any other third party.</li>
+  <li><strong>What we keep: no audio, no transcript, no conversation.</strong> The audio exists only in memory while it is being forwarded. The only thing we write to our database is a count of how many times you used the feature today, to enforce the daily free allowance.</li>
+  <li><strong>Where the conversation lives:</strong> entirely in your device's memory. Closing the voice window discards it. It is never synced, uploaded, or written anywhere other than the ledger entries you confirm.</li>
+  <li><strong>Nothing is recorded without your confirmation:</strong> the assistant only proposes a list. Amount, category, date, and note are all editable, and entries reach your ledger only after you press confirm.</li>
+  <li><strong>Downstream handling:</strong> once data reaches Groq it is governed by Groq's own privacy policy (<a href="https://groq.com/privacy-policy/">groq.com/privacy-policy</a>).</li>
+</ul>
+
+<h3>8. Other third-party services</h3>
 <ul>
   <li><strong>Google Play services / Google Play Billing</strong> — purchases and purchase verification (section 6).</li>
   <li><strong>In-app review API</strong> — once you have recorded a certain number of entries and this device has not been asked before, the App calls the platform’s own rating dialog (the Google Play In-App Review API on Android, Apple’s <code>SKStoreReviewController</code> on iOS). The platform handles the whole flow; <strong>the App is not told whether you rated it or what score you gave</strong>.</li>
@@ -285,20 +318,24 @@ account.</p>
   <li><strong>System print service</strong> — “Export PDF” is handed to the operating system’s built-in print / save-as-PDF function (on both Android and iOS), and you choose where the file is saved. The App does not read, upload, or retain the PDF you saved.</li>
 </ul>
 
-<h3>8. Permissions</h3>
-<p>On Android, the App declares exactly one permission — <strong>INTERNET</strong> — used for cloud sync, ads,
-and purchase verification. iOS has no equivalent network-access permission to declare; the
-tracking-authorization prompt tied to ad personalisation is covered in the previous section.
-<strong>On both platforms</strong>, the App never requests access to your camera, microphone, contacts, SMS,
-call logs, precise location, or photo library, and it does not request extra storage permission
-(PDF export is handled by the system print service).</p>
+<h3>9. Permissions</h3>
+<p>On Android, the App declares two kinds of permission: <strong>INTERNET</strong>, used for cloud sync, ads,
+and purchase verification; and <strong>RECORD_AUDIO / MODIFY_AUDIO_SETTINGS</strong>, used
+<strong>only</strong> for the voice entry feature described in section 7. The microphone is requested at the
+point of use: the system prompt appears the first time you tap the microphone button, and if you
+decline it — or simply never use voice entry — the App never records anything. iOS has no equivalent
+network-access permission to declare, and the microphone there is likewise requested by the system
+the first time you use voice entry; the tracking-authorization prompt tied to ad personalisation is
+covered in the previous section. <strong>On both platforms</strong>, the App never requests access to your
+camera, contacts, SMS, call logs, precise location, or photo library, and it does not request extra
+storage permission (PDF export is handled by the system print service).</p>
 
-<h3>9. Children</h3>
+<h3>10. Children</h3>
 <p>The App is not directed at children under 13, and we do not knowingly collect personal data from
 children. If you believe a child has provided us with data without a guardian’s consent, please
 contact us and we will delete it promptly.</p>
 
-<h3>10. Retention and deletion</h3>
+<h3>11. Retention and deletion</h3>
 <ul>
   <li><strong>Deleting your account:</strong> use <em>Settings → Delete account</em> in the App. This deletes the account, sessions, <strong>encrypted ledger copy</strong> and purchase records from our server, irreversibly. No email request, no manual processing, no waiting.</li>
   <li><strong>Local data:</strong> deleting the account does not automatically wipe the ledger on this device. Uninstall the App or clear its app data if you want that too.</li>
@@ -306,7 +343,7 @@ contact us and we will delete it promptly.</p>
   <li><strong>Purchase records:</strong> deleting your account also deletes our copy of your purchase records. Your purchase itself remains recorded with Google Play and can be recovered later with “Restore purchases” on the same Google account.</li>
 </ul>
 
-<h3>11. Changes and contact</h3>
+<h3>12. Changes and contact</h3>
 <p>If this policy changes, the date at the top of this page is updated and the change announced here.</p>
 <p>Questions about this policy or your data, or to exercise access / correction / deletion rights:
 <a href="mailto:fish@coss.com.tw">fish@coss.com.tw</a></p>
